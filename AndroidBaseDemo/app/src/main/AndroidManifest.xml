@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.binhbt.myapplication">
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:name=".ui.DemoApplication"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme.NoActionBar">
+        <activity android:name="com.example.binhbt.myapplication.ui.activity.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.activity.UserListActivity"/>
+        <activity android:name=".ui.activity.UserDetailActivity"/>
+
+        <activity android:name="com.example.binhbt.vegarecyclerview.demo.MainActivity"/>
+        <activity android:name="com.example.binhbt.vegarecyclerview.demo.VegaListVerticalActivity"/>
+        <activity android:name="com.example.binhbt.vegarecyclerview.demo.VegaListHorizontalActivity"/>
+        <activity android:name="com.example.binhbt.vegarecyclerview.demo.VegaGridVerticalActivity"/>
+        <activity android:name="com.example.binhbt.vegarecyclerview.demo.VegaGridHorizontalActivity"/>
+        <activity android:name="com.example.binhbt.vegarecyclerview.demo.VegaStaggedVerticalActivity"/>
+        <activity android:name="com.example.binhbt.vegarecyclerview.demo.VegaStaggedHorizontalActivity"/>
+        <activity android:name="com.example.binhbt.vegarecyclerview.demo.VegaSwipeActivity"/>
+        <activity android:name="com.example.binhbt.vegarecyclerview.demo.VegaHeaderAdapterActivity"/>
+        <activity android:name="com.example.binhbt.vegarecyclerview.demo.sectioned.HomeActivity"/>
+
+        <activity android:name="com.example.binhbt.vegarecyclerview.demo.multipleviewtype.MultipleDemoActivity"/>
+        <activity android:name="com.example.binhbt.vegarecyclerview.demo.multipleviewtype.ListVerticalMultipleViewActivity"/>
+        <activity android:name="com.example.binhbt.vegarecyclerview.demo.multipleviewtype.ListHorizontalMultipleViewActivity"/>
+        <activity android:name="com.example.binhbt.vegarecyclerview.demo.multipleviewtype.GridVerticalMultipleViewActivity"/>
+        <activity android:name="com.example.binhbt.vegarecyclerview.demo.multipleviewtype.GridHorizontalMultipleViewActivity"/>
+        <activity android:name="com.example.binhbt.vegarecyclerview.demo.multipleviewtype.StaggedHorizontalMultipleViewActivity"/>
+        <activity android:name="com.example.binhbt.vegarecyclerview.demo.multipleviewtype.StaggedVerticalMultipleViewActivity"/>
+        <activity android:name="com.example.binhbt.myapplication.ui.mvpdemo.ListAppActivity"/>
+    </application>
+
+</manifest>
