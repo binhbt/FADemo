@@ -2,10 +2,13 @@ package com.vega.webvttparser;
 
 import android.content.Context;
 import android.graphics.Bitmap;
+import android.util.Base64;
 import android.util.Log;
 
+import java.io.File;
 import java.util.HashMap;
 import java.util.Iterator;
+import java.util.List;
 import java.util.Map;
 import java.util.WeakHashMap;
 
@@ -43,7 +46,7 @@ public class SpriteSheetManager {
             for(Iterator<Map.Entry<String, Bitmap>> it = spriteSheetMap.entrySet().iterator(); it.hasNext(); ) {
                 Map.Entry<String, Bitmap> entry = it.next();
                 if (entry.getValue() != null){
-                    Log.e("removespritesheet at 0", "remove "+entry.getKey());
+                    //Log.e("removespritesheet at 0", "remove "+entry.getKey());
                     entry.getValue().recycle();
                     it.remove();
                     break;
@@ -64,12 +67,45 @@ public class SpriteSheetManager {
         for(Iterator<Map.Entry<String, Bitmap>> it = spriteSheetMap.entrySet().iterator(); it.hasNext(); ) {
             Map.Entry<String, Bitmap> entry = it.next();
             if (entry.getValue() != null){
-                Log.e("removespritesheet at 0", "remove "+entry.getKey());
+                //Log.e("removespritesheet at 0", "remove "+entry.getKey());
                 entry.getValue().recycle();
                 entry.setValue(null);
                 //it.remove();
             }
         }
         spriteSheetMap.clear();
+    }
+    public static Bitmap getThumb(Context ctx, long position, List<SubVtt> subVttList){
+        return getThumbSub(getSub(position, subVttList), ctx);
+    }
+    public static SubVtt getSub(long position, List<SubVtt> subVttList){
+        if (subVttList == null) return null;
+        for (SubVtt subVtt:subVttList
+             ) {
+            if (subVtt.getStartTimeStamp() <=position && position <=subVtt.getEndTimeStamp()){
+                return subVtt;
+            }
+        }
+        return null;
+    }
+    public static Bitmap getThumbSub(SubVtt subVtt, Context ctx){
+        if (subVtt == null) return null;
+        File f = FileUtil.getExternalFile(ctx, getBase64(subVtt.getSpriteSheetUrl()));
+        Bitmap bitmap = SpriteSheetManager.getDefault(ctx).get(f.getAbsolutePath());
+        if (bitmap != null) {
+            //Bitmap drawableBitmap = bitmap.copy(Bitmap.Config.ARGB_8888, true);
+            Bitmap drawableBitmap = null;
+            try {
+                drawableBitmap = Bitmap.createBitmap(bitmap, subVtt.getX(), subVtt.getY(), subVtt.getW(), subVtt.getH());
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            return drawableBitmap;
+        }
+        return null;
+    }
+    public static String getBase64(final String input) {
+        if (input == null) return null;
+        return Base64.encodeToString(input.getBytes(), Base64.URL_SAFE);
     }
 }

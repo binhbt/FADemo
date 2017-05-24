@@ -49,7 +49,7 @@ public class FileUtil {
             }
             return false;
         } catch (Exception e) {
-            Log.e("spriteSheetThumb", "exception in file creation");
+            //Log.e("spriteSheetThumb", "exception in file creation");
         }
         return false;
     }
@@ -63,7 +63,7 @@ public class FileUtil {
             srt.createNewFile();
             return srt;
         } catch (Exception e) {
-            Log.e("spriteSheetThumb", "exception in file creation");
+            //Log.e("spriteSheetThumb", "exception in file creation");
         }
         return null;
     }
@@ -77,7 +77,7 @@ public class FileUtil {
             }
             return false;
         } catch (Exception e) {
-            Log.e("spriteSheetThumb", "exception in file creation");
+            //Log.e("spriteSheetThumb", "exception in file creation");
         }
         return false;
     }
