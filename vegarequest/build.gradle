@@ -1,0 +1,55 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 24
+    buildToolsVersion '25.0.0'
+
+    defaultConfig {
+        minSdkVersion 15
+        targetSdkVersion 24
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath 'me.tatarka:gradle-retrolambda:3.2.5'
+    }
+}
+// Required because retrolambda is on maven central
+repositories {
+    mavenCentral()
+}
+
+//apply plugin: 'com.android.application' //or apply plugin: 'java'
+apply plugin: 'me.tatarka.retrolambda'
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
+    compile libraries.supportAppCompat
+    // Retrofit request library
+    compile libraries.retrofit2core
+    compile libraries.retrofit2convertergson
+    compile libraries.retrofit2adapterrxjava
+    compile libraries.retrofit2logging
+    // RxJava libraries
+    compile libraries.rxjava
+    compile libraries.rxandroid
+    compile libraries.okhttp3
+/*    compile "com.squareup.okhttp3:okhttp-urlconnection:3.2.0"
+    compile 'com.github.franmontiel:PersistentCookieJar:v1.0.0'*/
+}
