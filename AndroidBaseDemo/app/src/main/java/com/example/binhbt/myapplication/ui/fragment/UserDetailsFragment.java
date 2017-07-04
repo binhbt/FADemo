@@ -131,12 +131,6 @@ public class UserDetailsFragment extends BaseFragment {
                         //Log.e("response", result.toString());
                     }
                 })
-                .cancel(new RequestLoader.OnCancelRequest() {
-                    @Override
-                    public void onCancel() {
-                        Log.e("Cancel ", "cancelled ......");
-                    }
-                })
                 .container(this)
                 .tag("get_list")
                 .build();

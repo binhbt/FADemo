@@ -96,13 +96,6 @@ public class UserListFragment extends BaseFragment {
                     }
                 })
                 .container(this)
-                .cancel(new RequestLoader.OnCancelRequest() {
-                    @Override
-                    public void onCancel() {
-                        Log.i("asdasd", "Unsubscribing subscription from onResume()");
-                    }
-                })
-                .container(this)
                 .tag("interval")
                 .build();
         new Handler().postDelayed(new Runnable() {
@@ -138,12 +131,6 @@ public class UserListFragment extends BaseFragment {
                         hideLoading();
                         renderUserList(result);
                         //Log.e("response", result.toString());
-                    }
-                })
-                .cancel(new RequestLoader.OnCancelRequest() {
-                    @Override
-                    public void onCancel() {
-                        Log.e("Cancel ", "cancelled ......");
                     }
                 })
                 .container(UserListFragment.this)

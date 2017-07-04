@@ -25,7 +25,6 @@ public interface EndPoints {
 	@GET("other_app.json")
 	public Observable<List<VersionApp>> listOtherApp();
 
-//	String API_ENDPOINT = "http://www.android10.org/myapi/";
 
 	@GET("users.json")
 	public Observable<List<User>>
