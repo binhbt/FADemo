@@ -103,7 +103,7 @@ public class UserDetailsFragment extends BaseFragment {
     private void loadUserDetails() {
         User user= (User)getArguments().getSerializable("user");
         new RequestLoader.Builder()
-                .api(api.userEntityById(user.getUserId()))
+                .api(api.userEntityById(0))
                 .callback(new RequestLoader.CallBack<User>() {
                     @Override
                     public void onStart() {

@@ -1,9 +1,8 @@
 package com.example.binhbt.myapplication.net;
-
-
 import com.example.binhbt.myapplication.model.User;
 import com.example.binhbt.myapplication.model.VersionApp;
 
+import java.lang.reflect.Type;
 import java.util.List;
 import java.util.Map;
 
@@ -17,7 +16,7 @@ import retrofit2.http.QueryMap;
 import rx.Observable;
 
 /**
- * Created by gary on 08/02/16.
+ *
  */
 public interface EndPoints {
 	public static final String API_ENDPOINT = "http://tvbox.vegacdn.vn/tvbox/file/";
@@ -25,12 +24,11 @@ public interface EndPoints {
 	@GET("other_app.json")
 	public Observable<List<VersionApp>> listOtherApp();
 
-
-	@GET("users.json")
+	@GET("test/user_list.json")
 	public Observable<List<User>>
 	userEntityList();
 
-	@GET("user_{userId}.json")
+	@GET("test/user_{userId}.json")
 	public Observable<User>
 	userEntityById(@Path("userId") int userId);
 

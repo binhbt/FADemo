@@ -9,6 +9,11 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/../../VegaRecyclerView/library" />
+            <option value="$PROJECT_DIR$/../../Vegabase/library" />
+            <option value="$PROJECT_DIR$/../../Vegarequest/library" />
+            <option value="$PROJECT_DIR$/../../vegafirebase/library" />
+            <option value="$PROJECT_DIR$/../../vegaimageloader/library" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

@@ -1,6 +1,7 @@
 package com.example.binhbt.myapplication.ui;
 
 import com.example.binhbt.myapplication.net.EndPoints;
+import com.vega.loader.FALoader;
 import com.vn.vega.base.VegaApplication;
 
 /**
@@ -11,6 +12,7 @@ public class DemoApplication extends VegaApplication{
     @Override
     public void onCreate() {
         super.onCreate();
+        FALoader.initialize(this);
     }
     public String getBaseUrl(){
         return EndPoints.API_ENDPOINT;

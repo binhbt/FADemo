@@ -42,8 +42,9 @@ dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     testCompile 'junit:junit:4.12'
     compile libraries.supportAppCompat
-    compile 'com.github.binhbt:Vegabase:1.0.1'
-
+    //compile 'com.github.binhbt:Vegabase:1.0.1'
+    compile project(':Vegabase')
+    compile project(':vegaimageloader')
 
     compile libraries.supportCardView
     compile libraries.supportRecyclerView
@@ -54,3 +55,4 @@ dependencies {
     compile libraries.stickyheaders
 
 }
+apply plugin: 'com.google.gms.google-services'

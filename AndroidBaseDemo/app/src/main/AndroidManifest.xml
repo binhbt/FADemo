@@ -41,6 +41,8 @@
         <activity android:name="com.example.binhbt.vegarecyclerview.demo.multipleviewtype.StaggedHorizontalMultipleViewActivity"/>
         <activity android:name="com.example.binhbt.vegarecyclerview.demo.multipleviewtype.StaggedVerticalMultipleViewActivity"/>
         <activity android:name="com.example.binhbt.myapplication.ui.mvpdemo.ListAppActivity"/>
+        <activity android:name=".ui.farecyclerview.FARecyclerViewActivity"/>
+
     </application>
 
 </manifest>

@@ -23,7 +23,7 @@ import java.util.ArrayList;
 public abstract class VegaBaseActivity extends Activity implements SwipeRefreshLayout.OnRefreshListener, OnMoreListener, SwipeDismissRecyclerViewTouchListener.DismissCallbacks {
 
     private RecyclerViewWrapper mRecycler;
-    private StringListAdapter          mAdapter;
+    private StringListAdapter   mAdapter;
     private SparseItemRemoveAnimator mSparseAnimator;
     private RecyclerView.LayoutManager mLayoutManager;
     private Handler mHandler;

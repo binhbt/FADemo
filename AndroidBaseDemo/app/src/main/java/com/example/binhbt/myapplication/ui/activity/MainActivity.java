@@ -3,25 +3,21 @@ package com.example.binhbt.myapplication.ui.activity;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.PersistableBundle;
 import android.support.v7.app.AlertDialog;
-import android.util.Log;
 import android.view.Window;
 import android.view.WindowManager;
-import android.widget.Toast;
 
 
 import com.example.binhbt.myapplication.R;
 import com.example.binhbt.myapplication.model.User;
+import com.example.binhbt.myapplication.ui.farecyclerview.FARecyclerViewActivity;
 import com.example.binhbt.myapplication.ui.mvpdemo.ListAppActivity;
-import com.vn.vega.base.ui.VegaActivity;
 import com.vn.vega.net.ParamBuilder;
 import com.vn.vega.net.RequestLoader;
 
 import java.util.List;
 import java.util.Map;
 
-import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 public class MainActivity extends BaseActivity {
@@ -58,6 +54,11 @@ public class MainActivity extends BaseActivity {
     public void showMvpDemo() {
         //showDialog();
         startActivity(new Intent(this, ListAppActivity.class));
+    }
+    @OnClick(R.id.btn_fa_recyclerview)
+    public void showFaRecyclerview() {
+        //showDialog();
+        startActivity(new Intent(this, FARecyclerViewActivity.class));
     }
     private void showDialog(){
         new AlertDialog.Builder(this)

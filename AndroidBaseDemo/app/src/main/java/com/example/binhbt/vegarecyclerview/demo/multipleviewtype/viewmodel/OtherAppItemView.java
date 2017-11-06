@@ -1,12 +1,11 @@
 package com.example.binhbt.vegarecyclerview.demo.multipleviewtype.viewmodel;
 
 import android.view.View;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.binhbt.myapplication.R;
 import com.example.binhbt.myapplication.model.VersionApp;
-import com.squareup.picasso.Picasso;
+import com.vega.loader.widget.FAImageView;
 import com.vn.vega.adapter.multipleviewtype.BinderViewHolder;
 import com.vn.vega.adapter.multipleviewtype.VegaDataBinder;
 import com.vn.vega.base.holder.VegaViewHolder;
@@ -28,9 +27,10 @@ public class OtherAppItemView  extends VegaDataBinder<VersionApp> {
     public void bindViewHolder(BinderViewHolder holder, int position) {
         holder1 = (PhotoViewHolder) holder;
         if (data.getResId() ==null) {
-            Picasso.with(holder1.mImageView.getContext())
+/*            Picasso.with(holder1.mImageView.getContext())
                     .load(data.getThumb())
-                    .into(holder1.mImageView);
+                    .into(holder1.mImageView);*/
+                holder1.mImageView.loadImage(data.getThumb());
         }else{
             holder1.mImageView.setImageDrawable(data.getResId());
         }
@@ -52,7 +52,7 @@ public class OtherAppItemView  extends VegaDataBinder<VersionApp> {
 
     public class PhotoViewHolder extends VegaViewHolder {
         @Bind(R.id.thumb)
-        ImageView mImageView;
+        FAImageView mImageView;
         @Bind(R.id.tittle)
         TextView title;
         @Bind(R.id.item)
