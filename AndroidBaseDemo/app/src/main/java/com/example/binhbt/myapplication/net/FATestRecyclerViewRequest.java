@@ -1,0 +1,36 @@
+package com.example.binhbt.myapplication.net;
+
+import com.example.binhbt.myapplication.model.VersionApp;
+import com.google.gson.reflect.TypeToken;
+import com.vn.vega.base.model.VegaObject;
+
+import java.lang.reflect.Type;
+import java.util.List;
+
+/**
+ * Created by leobui on 11/3/2017.
+ */
+
+public class FATestRecyclerViewRequest extends BaseRequest{
+    @Override
+    protected String getPath() {
+        return "test/test_list.json";
+    }
+
+    @Override
+    protected Type getDataType() {
+        Type type = new TypeToken<VegaObject<List<VersionApp>>>() {}.getType();
+        return type;
+    }
+    @Override
+    protected Convert getConvert() {
+        return new Convert<VegaObject<List<VersionApp>>, List<VersionApp>>() {
+
+            @Override
+            public List<VersionApp> call(VegaObject<List<VersionApp>> o) {
+                return o.getData();
+            }
+        };
+    }
+
+}
