@@ -7,7 +7,7 @@ import com.example.binhbt.myapplication.R;
 import com.example.binhbt.vegarecyclerview.demo.multipleviewtype.model.TextItem;
 import com.vn.vega.adapter.multipleviewtype.BinderViewHolder;
 import com.vn.vega.adapter.multipleviewtype.VegaDataBinder;
-import com.vn.vega.base.holder.VegaViewHolder;
+import com.vn.fa.base.holder.VegaViewHolder;
 
 import butterknife.Bind;
 

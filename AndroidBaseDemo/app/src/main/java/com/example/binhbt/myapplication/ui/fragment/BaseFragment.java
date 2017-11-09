@@ -1,21 +1,17 @@
 package com.example.binhbt.myapplication.ui.fragment;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.widget.Toast;
 
 import com.example.binhbt.myapplication.net.EndPoints;
 import com.example.binhbt.myapplication.ui.DemoApplication;
-import com.vn.vega.base.ui.VegaFragment;
-import com.vn.vega.ui.RxFragment;
-
-import org.greenrobot.eventbus.EventBus;
+import com.vn.fa.base.ui.FaFragment;
 
 
 /**
  * Created by binhbt on 6/8/2016.
  */
-public class BaseFragment extends VegaFragment {
+public class BaseFragment extends FaFragment {
     protected EndPoints api = DemoApplication.getApi();
     protected void showToastMessage(String message) {
         Toast.makeText(getActivity(), message, Toast.LENGTH_SHORT).show();

@@ -2,20 +2,21 @@ package com.example.binhbt.vegarecyclerview.demo.multipleviewtype.viewmodel;
 
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.binhbt.myapplication.R;
 import com.example.binhbt.myapplication.model.VersionApp;
-import com.vega.loader.widget.FAImageView;
+import com.fa.loader.widget.FAImageView;
 import com.vn.vega.adapter.multipleviewtype.BinderViewHolder;
-import com.vn.vega.adapter.multipleviewtype.VegaDataBinder;
-import com.vn.vega.base.holder.VegaViewHolder;
+import com.vn.fa.base.holder.VegaBinderView;
+import com.vn.fa.base.holder.VegaViewHolder;
 
 import butterknife.Bind;
 
 /**
  * Created by binhbt on 3/7/2017.
  */
-public class OtherAppItemView  extends VegaDataBinder<VersionApp> {
+public class OtherAppItemView  extends VegaBinderView<VersionApp> {
     public OtherAppItemView(VersionApp data) {
         super(data);
     }
@@ -27,10 +28,28 @@ public class OtherAppItemView  extends VegaDataBinder<VersionApp> {
     public void bindViewHolder(BinderViewHolder holder, int position) {
         holder1 = (PhotoViewHolder) holder;
         if (data.getResId() ==null) {
-/*            Picasso.with(holder1.mImageView.getContext())
-                    .load(data.getThumb())
-                    .into(holder1.mImageView);*/
-                holder1.mImageView.loadImage(data.getThumb());
+                holder1.mImageView
+                        .callback(new FAImageView.Callback() {
+                            @Override
+                            public void onStart() {
+                                //Toast.makeText(holder1.mImageView.getContext(), "Start", Toast.LENGTH_LONG).show();
+                            }
+
+                            @Override
+                            public void onSuccess() {
+                                //Toast.makeText(holder1.mImageView.getContext(), "Success", Toast.LENGTH_LONG).show();
+
+                            }
+
+                            @Override
+                            public void onError() {
+                                Toast.makeText(holder1.mImageView.getContext(), "Error", Toast.LENGTH_LONG).show();
+
+                            }
+                        })
+                        .placeholder(R.drawable.common_full_open_on_phone)
+                        .error(R.drawable.ic_android_black_48dp)
+                        .loadImage(data.getThumb());
         }else{
             holder1.mImageView.setImageDrawable(data.getResId());
         }

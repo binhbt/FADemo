@@ -4,19 +4,26 @@ import android.os.Bundle;
 
 import com.example.binhbt.myapplication.R;
 import com.example.binhbt.myapplication.net.FATestRecyclerViewRequest;
-import com.vn.vega.base.ui.VegaActivity;
-import com.vn.vega.base.widget.FARecyclerview;
+import com.vn.fa.base.ui.FaActivity;
+import com.vn.fa.base.widget.FARecyclerview;
 
 import butterknife.Bind;
+import butterknife.OnClick;
 
 /**
  * Created by leobui on 11/3/2017.
  */
-public class FARecyclerViewActivity extends VegaActivity{
+public class FARecyclerViewActivity extends FaActivity {
     @Bind(R.id.list)FARecyclerview recyclerview;
+    @OnClick(R.id.list)
+    public void clickList(){
+
+    }
     @Override
     protected void initView(Bundle savedInstanceState) {
-        recyclerview.api(new FATestRecyclerViewRequest())
+        recyclerview
+                .api(new FATestRecyclerViewRequest())
+                //.api(DemoRequestFactory.getInstance().getRequest())
                 .canRefresh(true)
                 .canLoadMore(true)
                 .container(this)

@@ -2,7 +2,7 @@ package com.example.binhbt.myapplication.net;
 
 import com.example.binhbt.myapplication.model.VersionApp;
 import com.google.gson.reflect.TypeToken;
-import com.vn.vega.base.model.VegaObject;
+import com.vn.fa.base.model.VegaObject;
 
 import java.lang.reflect.Type;
 import java.util.List;

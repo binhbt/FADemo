@@ -1,6 +1,5 @@
 package com.example.binhbt.vegarecyclerview.demo.multipleviewtype.viewmodel;
 
-import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.ImageView;
 
@@ -9,7 +8,7 @@ import com.example.binhbt.vegarecyclerview.demo.multipleviewtype.model.PhotoItem
 import com.squareup.picasso.Picasso;
 import com.vn.vega.adapter.multipleviewtype.BinderViewHolder;
 import com.vn.vega.adapter.multipleviewtype.VegaDataBinder;
-import com.vn.vega.base.holder.VegaViewHolder;
+import com.vn.fa.base.holder.VegaViewHolder;
 
 import butterknife.Bind;
 

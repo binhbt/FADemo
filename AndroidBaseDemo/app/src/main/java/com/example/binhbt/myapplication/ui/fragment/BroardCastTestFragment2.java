@@ -7,7 +7,7 @@ import android.widget.TextView;
 
 import com.example.binhbt.myapplication.R;
 import com.example.binhbt.myapplication.ui.activity.BaseActivity;
-import com.vn.vega.base.ui.VegaFragment;
+import com.vn.fa.base.ui.FaFragment;
 
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
@@ -18,7 +18,7 @@ import butterknife.OnClick;
 /**
  * Created by binhbt on 8/12/2016.
  */
-public class BroardCastTestFragment2 extends VegaFragment {
+public class BroardCastTestFragment2 extends FaFragment {
     @Bind(R.id.result)
     TextView result;
     @OnClick(R.id.add_fragment)

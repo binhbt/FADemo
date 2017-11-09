@@ -1,13 +1,13 @@
 package com.example.binhbt.myapplication.ui;
 
 import com.example.binhbt.myapplication.net.EndPoints;
-import com.vega.loader.FALoader;
-import com.vn.vega.base.VegaApplication;
+import com.fa.loader.FALoader;
+import com.vn.fa.base.FaApplication;
 
 /**
  * Created by binhbt on 6/22/2016.
  */
-public class DemoApplication extends VegaApplication{
+public class DemoApplication extends FaApplication {
     static volatile EndPoints singletonApi;
     @Override
     public void onCreate() {

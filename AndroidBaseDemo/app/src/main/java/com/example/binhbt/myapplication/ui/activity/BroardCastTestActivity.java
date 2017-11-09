@@ -5,8 +5,6 @@ import android.support.v4.app.Fragment;
 
 import com.example.binhbt.myapplication.R;
 import com.example.binhbt.myapplication.ui.fragment.BroardCatsTestFragment;
-import com.example.binhbt.myapplication.ui.fragment.UserDetailsFragment;
-import com.vn.vega.base.ui.VegaActivity;
 
 /**
  * Created by binhbt on 8/12/2016.

@@ -1,7 +1,7 @@
 package com.example.binhbt.myapplication.ui.mvpdemo;
 
 import com.example.binhbt.myapplication.model.VersionApp;
-import com.vn.vega.base.mvp.MvpView;
+import com.vn.fa.base.mvp.MvpView;
 
 import java.util.List;
 

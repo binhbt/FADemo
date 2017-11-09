@@ -1,12 +1,33 @@
 package com.example.binhbt.myapplication.net;
 
-import com.vn.vega.base.net.FARequest;
+import com.vn.fa.base.net.FARequest;
 
 /**
  * Created by leobui on 10/30/2017.
  */
 
 public class BaseRequest extends FARequest {
+    public BaseRequest(){
+        //Add callback for all request
+        addCallBack(new RequestCallBack() {
+            @Override
+            public void onStart() {
+
+            }
+
+            @Override
+            public void onError(Throwable t) {
+
+            }
+
+            @Override
+            public void onFinish(Object result) {
+//                if (container != null){
+//                    Toast.makeText(((Activity)container), "base callback", Toast.LENGTH_LONG).show();
+//                }
+            }
+        });
+    }
     public static final String API_ENDPOINT = "http://tvbox.vegacdn.vn/tvbox/file/";
     @Override
     public boolean isLogging() {
