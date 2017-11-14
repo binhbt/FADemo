@@ -1,10 +1,7 @@
 package com.example.binhbt.myapplication.ui.fragment;
 
 import android.os.Bundle;
-import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
@@ -14,10 +11,9 @@ import android.widget.Toast;
 import com.example.binhbt.myapplication.R;
 import com.example.binhbt.myapplication.model.User;
 import com.squareup.picasso.Picasso;
-import com.vn.vega.net.RequestLoader;
+import com.vn.fa.net.RequestLoader;
 
 import butterknife.Bind;
-import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 /**

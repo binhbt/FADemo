@@ -4,15 +4,10 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/AndroidBaseDemo.iml" filepath="$PROJECT_DIR$/AndroidBaseDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/../../VegaRecyclerView/library/VegaRecyclerView.iml" filepath="$PROJECT_DIR$/../../VegaRecyclerView/library/VegaRecyclerView.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../../VegaRecyclerView/library/VegaRecyclerView.iml" filepath="$PROJECT_DIR$/../../VegaRecyclerView/library/VegaRecyclerView.iml" />
       <module fileurl="file://$PROJECT_DIR$/../../Vegabase/library/Vegabase.iml" filepath="$PROJECT_DIR$/../../Vegabase/library/Vegabase.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../../Vegabase/library/Vegabase.iml" filepath="$PROJECT_DIR$/../../Vegabase/library/Vegabase.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../../Vegarequest/library/Vegarequest.iml" filepath="$PROJECT_DIR$/../../Vegarequest/library/Vegarequest.iml" />
       <module fileurl="file://$PROJECT_DIR$/../../Vegarequest/library/Vegarequest.iml" filepath="$PROJECT_DIR$/../../Vegarequest/library/Vegarequest.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/../../vegafirebase/library/vegafirebase.iml" filepath="$PROJECT_DIR$/../../vegafirebase/library/vegafirebase.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../../vegafirebase/library/vegafirebase.iml" filepath="$PROJECT_DIR$/../../vegafirebase/library/vegafirebase.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../../vegaimageloader/library/vegaimageloader.iml" filepath="$PROJECT_DIR$/../../vegaimageloader/library/vegaimageloader.iml" />
       <module fileurl="file://$PROJECT_DIR$/../../vegaimageloader/library/vegaimageloader.iml" filepath="$PROJECT_DIR$/../../vegaimageloader/library/vegaimageloader.iml" />
     </modules>
   </component>

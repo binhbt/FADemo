@@ -1,12 +1,12 @@
 package com.example.binhbt.myapplication.net;
 
-import com.vn.fa.base.net.FARequest;
+import com.vn.fa.base.net.FaRequest;
 
 /**
  * Created by leobui on 10/30/2017.
  */
 
-public class BaseRequest extends FARequest {
+public class BaseRequest extends FaRequest {
     public BaseRequest(){
         //Add callback for all request
         addCallBack(new RequestCallBack() {

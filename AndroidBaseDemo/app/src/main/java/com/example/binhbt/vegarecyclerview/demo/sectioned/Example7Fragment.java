@@ -22,10 +22,10 @@ import android.widget.Toast;
 
 import com.example.binhbt.myapplication.R;
 import com.malinskiy.superrecyclerview.OnMoreListener;
-import com.vn.vega.adapter.sectionedrecyclerviewadapter.Section;
-import com.vn.vega.adapter.sectionedrecyclerviewadapter.SectionedRecyclerViewAdapter;
-import com.vn.vega.adapter.sectionedrecyclerviewadapter.StatelessSection;
-import com.vn.vega.widget.RecyclerViewWrapper;
+import com.vn.fa.adapter.sectionedrecyclerviewadapter.Section;
+import com.vn.fa.adapter.sectionedrecyclerviewadapter.SectionedRecyclerViewAdapter;
+import com.vn.fa.adapter.sectionedrecyclerviewadapter.StatelessSection;
+import com.vn.fa.widget.RecyclerViewWrapper;
 
 import java.util.ArrayList;
 import java.util.List;

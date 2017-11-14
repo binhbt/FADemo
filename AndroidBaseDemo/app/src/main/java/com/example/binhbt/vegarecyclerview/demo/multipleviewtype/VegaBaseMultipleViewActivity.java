@@ -3,7 +3,6 @@ package com.example.binhbt.vegarecyclerview.demo.multipleviewtype;
 import android.app.Activity;
 import android.os.Bundle;
 import android.os.Handler;
-import android.os.IBinder;
 import android.os.Looper;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.RecyclerView;
@@ -17,9 +16,9 @@ import com.example.binhbt.vegarecyclerview.demo.multipleviewtype.model.TextItem;
 import com.malinskiy.superrecyclerview.OnMoreListener;
 import com.malinskiy.superrecyclerview.swipe.SparseItemRemoveAnimator;
 import com.malinskiy.superrecyclerview.swipe.SwipeDismissRecyclerViewTouchListener;
-import com.vn.vega.adapter.multipleviewtype.IViewBinder;
-import com.vn.vega.adapter.multipleviewtype.VegaBindAdapter;
-import com.vn.vega.widget.RecyclerViewWrapper;
+import com.vn.fa.adapter.multipleviewtype.IViewBinder;
+import com.vn.fa.adapter.multipleviewtype.VegaBindAdapter;
+import com.vn.fa.widget.RecyclerViewWrapper;
 
 import java.util.ArrayList;
 

@@ -12,7 +12,7 @@ import android.widget.Toast;
 import com.example.binhbt.myapplication.R;
 import com.malinskiy.superrecyclerview.OnMoreListener;
 import com.malinskiy.superrecyclerview.swipe.SwipeItemManagerInterface;
-import com.vn.vega.widget.RecyclerViewWrapper;
+import com.vn.fa.widget.RecyclerViewWrapper;
 
 import java.util.ArrayList;
 

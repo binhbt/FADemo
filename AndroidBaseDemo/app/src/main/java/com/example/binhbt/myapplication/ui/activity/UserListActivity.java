@@ -30,4 +30,18 @@ public class UserListActivity extends BaseActivity{
     protected int getLayoutId() {
         return R.layout.activity_layout;
     }
+
+    @Override
+    protected boolean isToolBar() {
+        return true;
+    }
+    @Override
+    protected int getMenuLayout() {
+        return R.menu.menu_ex7;
+    }
+
+    @Override
+    protected boolean isBackEnabled() {
+        return true;
+    }
 }

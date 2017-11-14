@@ -3,8 +3,8 @@ package com.example.binhbt.myapplication.model;
 import android.graphics.drawable.Drawable;
 
 import com.example.binhbt.vegarecyclerview.demo.multipleviewtype.viewmodel.OtherAppItemView;
-import com.vn.vega.adapter.multipleviewtype.DataBinder;
-import com.vn.vega.adapter.multipleviewtype.IViewBinder;
+import com.vn.fa.adapter.multipleviewtype.DataBinder;
+import com.vn.fa.adapter.multipleviewtype.IViewBinder;
 
 /**
  * Created by binhbt on 3/7/2017.

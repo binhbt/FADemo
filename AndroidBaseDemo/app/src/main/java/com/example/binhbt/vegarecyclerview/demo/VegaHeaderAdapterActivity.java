@@ -9,7 +9,7 @@ import android.widget.Toast;
 import com.eowise.recyclerview.stickyheaders.StickyHeadersBuilder;
 import com.eowise.recyclerview.stickyheaders.StickyHeadersItemDecoration;
 import com.example.binhbt.myapplication.R;
-import com.vn.vega.widget.RecyclerViewWrapper;
+import com.vn.fa.widget.RecyclerViewWrapper;
 
 import java.util.ArrayList;
 import java.util.Arrays;

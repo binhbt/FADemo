@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <com.vn.vega.widget.RecyclerViewWrapper xmlns:android="http://schemas.android.com/apk/res/android"
+    <com.vn.fa.widget.RecyclerViewWrapper xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/recyclerview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

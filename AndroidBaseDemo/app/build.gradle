@@ -1,13 +1,13 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 24
-    buildToolsVersion '25.0.0'
+    compileSdkVersion versions.compileSdk
+    buildToolsVersion versions.buildTools
 
     defaultConfig {
+        minSdkVersion versions.minSdk
+        targetSdkVersion versions.targetSdk
         applicationId "com.example.binhbt.myapplication"
-        minSdkVersion 15
-        targetSdkVersion 24
         versionCode 1
         versionName "1.0"
     }
@@ -43,13 +43,13 @@ dependencies {
     testCompile 'junit:junit:4.12'
     compile libraries.supportAppCompat
 
-    compile project(':Vegabase')
-
-    compile project(':vegaimageloader')
-    compile project(':vegafirebase')
+//    compile project(':Vegabase')
+    compile 'com.github.binhbt:Vegabase:1.2.3'
+//    compile project(':vegaimageloader')
+//    compile project(':vegafirebase')
 
     compile libraries.supportCardView
-    compile libraries.supportRecyclerView
+    //compile libraries.supportRecyclerView
     compile libraries.picasso
     compile libraries.supportDesign
     compile libraries.supportCardView

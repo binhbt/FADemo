@@ -1,12 +1,13 @@
 package com.example.binhbt.myapplication.net;
 
-import com.vn.fa.base.net.FARequest;
+import com.vn.fa.base.VegaRequestFactory;
+import com.vn.fa.base.net.FaRequest;
 
 /**
  * Created by leobui on 10/30/2017.
  */
 
-public class DemoRequestFactory extends VegaRequestFactory{
+public class DemoRequestFactory extends VegaRequestFactory {
     static volatile DemoRequestFactory vegaRequestFactory;
 
     public static DemoRequestFactory getInstance() {
@@ -39,7 +40,8 @@ public class DemoRequestFactory extends VegaRequestFactory{
     public void init() {
 
     }
-    public FARequest getRequest(DemoRequestType demoRequestType) {
+    public FaRequest getRequest(DemoRequestType demoRequestType) {
         return getRequest(demoRequestType.toString());
+        //return new BaseRequest().path(demoRequestType.toString());
     }
 }

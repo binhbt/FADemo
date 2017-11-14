@@ -1,11 +1,15 @@
 package com.example.binhbt.myapplication.ui.mvpdemo;
 
+import com.example.binhbt.myapplication.model.User;
 import com.example.binhbt.myapplication.model.VersionApp;
 import com.example.binhbt.myapplication.net.DemoRequestFactory;
+import com.example.binhbt.myapplication.net.FlatRequest;
 import com.google.gson.reflect.TypeToken;
 import com.vn.fa.base.mvp.BasePresenter;
-import com.vn.fa.base.net.FARequest;
+import com.vn.fa.base.net.FaRequest;
+import com.vn.fa.base.util.FaLog;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
@@ -81,7 +85,7 @@ public class ListAppPresenter extends BasePresenter<ListAppView> {
                 .dataType(new TypeToken<List<VersionApp>>() {
                 }.getType())
                 .type(RequestType.GET)
-                .callBack(new FARequest.RequestCallBack<List<VersionApp>>() {
+                .callBack(new FaRequest.RequestCallBack<List<VersionApp>>() {
                     @Override
                     public void onStart() {
 
@@ -107,7 +111,7 @@ public class ListAppPresenter extends BasePresenter<ListAppView> {
         DemoRequestFactory.getInstance().getRequest(DemoRequestFactory.DemoRequestType.HOME_REQUEST)
                 .params(new HashMap<>())
                 .dataType(new TypeToken<List<VersionApp>>() {}.getType())
-                .callBack(new FARequest.RequestCallBack<List<VersionApp>>() {
+                .callBack(new FaRequest.RequestCallBack<List<VersionApp>>() {
                     @Override
                     public void onStart() {
 
@@ -128,5 +132,27 @@ public class ListAppPresenter extends BasePresenter<ListAppView> {
                     }
                 })
                 .doRequest();
+/*        new FlatRequest()
+                .callBack(new FaRequest.RequestCallBack<User>() {
+                    @Override
+                    public void onStart() {
+
+                    }
+
+                    @Override
+                    public void onError(Throwable t) {
+
+                    }
+
+                    @Override
+                    public void onFinish(User result) {
+                        ArrayList<User> list = new ArrayList<User>();
+                        list.add(result);
+                        if (result != null) {
+                           //getMvpView().loadDataToView(list);
+                        }
+                    }
+                })
+                .doRequest();*/
     }
 }

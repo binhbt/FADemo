@@ -6,8 +6,8 @@ import android.widget.ImageView;
 import com.example.binhbt.myapplication.R;
 import com.example.binhbt.vegarecyclerview.demo.multipleviewtype.model.PhotoItem;
 import com.squareup.picasso.Picasso;
-import com.vn.vega.adapter.multipleviewtype.BinderViewHolder;
-import com.vn.vega.adapter.multipleviewtype.VegaDataBinder;
+import com.vn.fa.adapter.multipleviewtype.BinderViewHolder;
+import com.vn.fa.adapter.multipleviewtype.VegaDataBinder;
 import com.vn.fa.base.holder.VegaViewHolder;
 
 import butterknife.Bind;

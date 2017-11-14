@@ -1,9 +1,12 @@
 package com.example.binhbt.myapplication.ui.farecyclerview;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Toast;
 
 import com.example.binhbt.myapplication.R;
 import com.example.binhbt.myapplication.net.FATestRecyclerViewRequest;
+import com.vn.fa.base.holder.OnItemClickListener;
 import com.vn.fa.base.ui.FaActivity;
 import com.vn.fa.base.widget.FARecyclerview;
 
@@ -28,6 +31,12 @@ public class FARecyclerViewActivity extends FaActivity {
                 .canLoadMore(true)
                 .container(this)
                 .load();
+        recyclerview.setOnItemClickListener(new OnItemClickListener() {
+            @Override
+            public void onClick(View view, int pos) {
+                Toast.makeText(FARecyclerViewActivity.this, "Click to Item "+ pos, Toast.LENGTH_LONG).show();
+            }
+        });
     }
 
     @Override

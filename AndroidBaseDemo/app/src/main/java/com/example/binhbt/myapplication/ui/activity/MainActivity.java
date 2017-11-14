@@ -12,8 +12,8 @@ import com.example.binhbt.myapplication.R;
 import com.example.binhbt.myapplication.model.User;
 import com.example.binhbt.myapplication.ui.farecyclerview.FARecyclerViewActivity;
 import com.example.binhbt.myapplication.ui.mvpdemo.ListAppActivity;
-import com.vn.vega.net.ParamBuilder;
-import com.vn.vega.net.RequestLoader;
+import com.vn.fa.net.ParamBuilder;
+import com.vn.fa.net.RequestLoader;
 
 import java.util.List;
 import java.util.Map;

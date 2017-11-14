@@ -5,9 +5,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
@@ -19,17 +17,15 @@ import com.example.binhbt.myapplication.adapter.UsersLayoutManager;
 import com.example.binhbt.myapplication.model.MixUser;
 import com.example.binhbt.myapplication.model.User;
 import com.example.binhbt.myapplication.ui.activity.UserDetailActivity;
-import com.vn.vega.net.RequestLoader;
+import com.vn.fa.net.RequestLoader;
 
 import java.util.Collection;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import butterknife.Bind;
-import butterknife.ButterKnife;
 import butterknife.OnClick;
 import rx.Observable;
-import rx.Subscription;
 import rx.functions.Func2;
 
 /**

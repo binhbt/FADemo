@@ -1,13 +1,17 @@
 package com.example.binhbt.myapplication.ui.mvpdemo;
 
 import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
 
 import com.example.binhbt.myapplication.R;
 import com.example.binhbt.myapplication.model.VersionApp;
 import com.example.binhbt.myapplication.ui.activity.BaseActivity;
-import com.vn.vega.adapter.multipleviewtype.IViewBinder;
-import com.vn.vega.adapter.multipleviewtype.VegaBindAdapter;
-import com.vn.vega.widget.RecyclerViewWrapper;
+import com.vn.fa.adapter.multipleviewtype.IViewBinder;
+import com.vn.fa.adapter.multipleviewtype.VegaBindAdapter;
+import com.vn.fa.base.adapter.FaAdapter;
+import com.vn.fa.base.holder.OnItemClickListener;
+import com.vn.fa.widget.RecyclerViewWrapper;
 
 import java.util.List;
 
@@ -19,11 +23,16 @@ import butterknife.Bind;
 public class ListAppActivity extends BaseActivity implements ListAppView{
     @Bind(R.id.list)
     RecyclerViewWrapper mRecycler;
-    private VegaBindAdapter mAdapter;
+    private FaAdapter mAdapter;
     @Override
     protected void initView(Bundle savedInstanceState) {
-        mAdapter = new VegaBindAdapter();
-
+        mAdapter = new FaAdapter();
+        mAdapter.setOnItemClickListener(new OnItemClickListener() {
+            @Override
+            public void onClick(View view, int pos) {
+                Log.e("aa", "aa "+pos);
+            }
+        });
         presenter = new ListAppPresenter();
         presenter.attachView(this);
         ((ListAppPresenter)presenter).loadData();

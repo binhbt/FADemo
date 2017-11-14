@@ -1,8 +1,8 @@
 package com.example.binhbt.vegarecyclerview.demo.multipleviewtype.model;
 
 import com.example.binhbt.vegarecyclerview.demo.multipleviewtype.viewmodel.PhotoItemView;
-import com.vn.vega.adapter.multipleviewtype.DataBinder;
-import com.vn.vega.adapter.multipleviewtype.IViewBinder;
+import com.vn.fa.adapter.multipleviewtype.DataBinder;
+import com.vn.fa.adapter.multipleviewtype.IViewBinder;
 
 /**
  * Created by binhbt on 7/22/2016.

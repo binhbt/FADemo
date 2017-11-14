@@ -7,7 +7,7 @@ import android.widget.Toast;
 import com.example.binhbt.myapplication.R;
 import com.example.binhbt.myapplication.model.VersionApp;
 import com.fa.loader.widget.FAImageView;
-import com.vn.vega.adapter.multipleviewtype.BinderViewHolder;
+import com.vn.fa.adapter.multipleviewtype.BinderViewHolder;
 import com.vn.fa.base.holder.VegaBinderView;
 import com.vn.fa.base.holder.VegaViewHolder;
 

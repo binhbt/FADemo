@@ -13,7 +13,7 @@ import com.example.binhbt.myapplication.R;
 import com.malinskiy.superrecyclerview.OnMoreListener;
 import com.malinskiy.superrecyclerview.swipe.SparseItemRemoveAnimator;
 import com.malinskiy.superrecyclerview.swipe.SwipeDismissRecyclerViewTouchListener;
-import com.vn.vega.widget.RecyclerViewWrapper;
+import com.vn.fa.widget.RecyclerViewWrapper;
 
 import java.util.ArrayList;
 
