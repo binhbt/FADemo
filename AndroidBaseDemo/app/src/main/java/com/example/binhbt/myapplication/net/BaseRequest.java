@@ -1,5 +1,8 @@
 package com.example.binhbt.myapplication.net;
 
+import com.example.binhbt.myapplication.ui.DemoApplication;
+import com.vn.fa.base.data.DataRepository;
+import com.vn.fa.base.domain.Repository;
 import com.vn.fa.base.net.FaRequest;
 
 /**
@@ -31,6 +34,16 @@ public class BaseRequest extends FaRequest {
     public static final String API_ENDPOINT = "http://tvbox.vegacdn.vn/tvbox/file/";
     @Override
     public boolean isLogging() {
+        return true;
+    }
+
+    @Override
+    public Repository getDataRepository() {
+        return new DataRepository(getEndPoints(), DemoApplication.getCacheProviders());
+    }
+
+    @Override
+    public boolean isCache() {
         return true;
     }
 

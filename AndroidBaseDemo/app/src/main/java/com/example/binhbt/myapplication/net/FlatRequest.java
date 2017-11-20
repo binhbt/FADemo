@@ -2,7 +2,8 @@ package com.example.binhbt.myapplication.net;
 
 import com.example.binhbt.myapplication.model.User;
 
-import rx.Observable;
+import io.reactivex.Observable;
+
 
 /**
  * Created by leobui on 11/9/2017.

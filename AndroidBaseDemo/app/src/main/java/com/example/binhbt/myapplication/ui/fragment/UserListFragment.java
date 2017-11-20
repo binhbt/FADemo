@@ -25,8 +25,8 @@ import java.util.concurrent.TimeUnit;
 
 import butterknife.Bind;
 import butterknife.OnClick;
-import rx.Observable;
-import rx.functions.Func2;
+import io.reactivex.Observable;
+import io.reactivex.functions.BiFunction;
 
 /**
  * Created by binhbt on 6/8/2016.
@@ -207,9 +207,9 @@ public class UserListFragment extends BaseFragment {
         super.onStop();
     }
     private void zipTest(){
-        Observable<MixUser> combined = Observable.zip(api.userEntityList(), api.userEntityById(1), new Func2<List<User>, User, MixUser>() {
+        Observable<MixUser> combined = Observable.zip(api.userEntityList(), api.userEntityById(1), new BiFunction<List<User>, User, MixUser>() {
             @Override
-            public MixUser call(List<User> lsUser, User user) {
+            public MixUser apply(List<User> lsUser, User user) {
                 return new MixUser(lsUser, user);
             }
         });

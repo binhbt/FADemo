@@ -5,8 +5,8 @@ import com.example.binhbt.myapplication.model.User;
 
 import java.util.List;
 
-import rx.Observable;
-import rx.functions.Func2;
+import io.reactivex.Observable;
+import io.reactivex.functions.BiFunction;
 
 /**
  * Created by leobui on 11/9/2017.
@@ -17,9 +17,9 @@ public class MixRequest extends BaseRequest{
     protected Observable getApi() {
         UserListRequest userListRequest = new UserListRequest();
         UserDetailRequest detailRequest = new UserDetailRequest();
-        Observable<MixUser> combined = Observable.zip(userListRequest.getApi(), detailRequest.getApi(), new Func2<List<User>, User, MixUser>() {
+        Observable<MixUser> combined = Observable.zip(userListRequest.getApi(), detailRequest.getApi(), new BiFunction<List<User>, User, MixUser>() {
             @Override
-            public MixUser call(List<User> lsUser, User user) {
+            public MixUser apply(List<User> lsUser, User user) {
                 return new MixUser(lsUser, user);
             }
         });

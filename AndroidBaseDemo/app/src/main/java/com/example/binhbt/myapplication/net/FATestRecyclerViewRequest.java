@@ -27,7 +27,7 @@ public class FATestRecyclerViewRequest extends BaseRequest{
         return new Convert<VegaObject<List<VersionApp>>, List<VersionApp>>() {
 
             @Override
-            public List<VersionApp> call(VegaObject<List<VersionApp>> o) {
+            public List<VersionApp> apply(VegaObject<List<VersionApp>> o) {
                 return o.getData();
             }
         };

@@ -8,7 +8,8 @@ import com.vn.fa.base.net.request.RequestType;
 import java.lang.reflect.Type;
 import java.util.List;
 
-import rx.Observable;
+import io.reactivex.Observable;
+
 
 /**
  * Created by leobui on 11/9/2017.
