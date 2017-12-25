@@ -2,7 +2,8 @@ package com.example.binhbt.myapplication.model;
 
 import android.graphics.drawable.Drawable;
 
-import com.example.binhbt.vegarecyclerview.demo.multipleviewtype.viewmodel.OtherAppItemView;
+import com.example.binhbt.myapplication.viewmodel.AppItemCircleView;
+import com.example.binhbt.myapplication.viewmodel.OtherAppItemView;
 import com.vn.fa.adapter.multipleviewtype.DataBinder;
 import com.vn.fa.adapter.multipleviewtype.IViewBinder;
 
@@ -10,6 +11,10 @@ import com.vn.fa.adapter.multipleviewtype.IViewBinder;
  * Created by binhbt on 3/7/2017.
  */
 public class  VersionApp implements IViewBinder {
+    public enum ViewType{
+        CIRCLE,
+        ROUND
+    }
     private String id;
     private String type;
     private String title;
@@ -18,7 +23,16 @@ public class  VersionApp implements IViewBinder {
     private String versionName;
     private String versionCode;
     private String thumb;
+    private ViewType viewType;
     private transient Drawable resId;
+
+    public ViewType getViewType() {
+        return viewType;
+    }
+
+    public void setViewType(ViewType viewType) {
+        this.viewType = viewType;
+    }
 
     public Drawable getResId() {
         return resId;
@@ -30,7 +44,10 @@ public class  VersionApp implements IViewBinder {
 
     @Override
     public DataBinder getViewBinder() {
-        return new OtherAppItemView(this);
+        if (viewType == ViewType.CIRCLE){
+            return  new AppItemCircleView(this).itemViewType(ViewType.CIRCLE.ordinal());
+        }
+        return new OtherAppItemView(this).itemViewType(ViewType.ROUND.ordinal());
     }
 
     public String getThumb() {

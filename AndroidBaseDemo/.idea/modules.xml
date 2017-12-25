@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/AndroidBaseDemo.iml" filepath="$PROJECT_DIR$/AndroidBaseDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/../../FaCache/library/FaCache.iml" filepath="$PROJECT_DIR$/../../FaCache/library/FaCache.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../FaDataBase/library/FaDataBase.iml" filepath="$PROJECT_DIR$/../../FaDataBase/library/FaDataBase.iml" />
       <module fileurl="file://$PROJECT_DIR$/../../VegaRecyclerView/library/VegaRecyclerView.iml" filepath="$PROJECT_DIR$/../../VegaRecyclerView/library/VegaRecyclerView.iml" />
       <module fileurl="file://$PROJECT_DIR$/../../Vegabase/library/Vegabase.iml" filepath="$PROJECT_DIR$/../../Vegabase/library/Vegabase.iml" />
       <module fileurl="file://$PROJECT_DIR$/../../Vegarequest/library/Vegarequest.iml" filepath="$PROJECT_DIR$/../../Vegarequest/library/Vegarequest.iml" />

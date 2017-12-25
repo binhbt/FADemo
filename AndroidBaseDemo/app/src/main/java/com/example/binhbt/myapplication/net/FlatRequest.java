@@ -11,7 +11,7 @@ import io.reactivex.Observable;
 
 public class FlatRequest extends BaseRequest{
     @Override
-    protected Observable getApi() {
+    public Observable getApi() {
         UserListRequest userListRequest = new UserListRequest();
         UserDetailRequest detailRequest = new UserDetailRequest();
         Observable<User> flat = userListRequest.getApi().flatMap(ls->detailRequest.getApi());

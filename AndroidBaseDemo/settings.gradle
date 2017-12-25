@@ -9,3 +9,5 @@ include ':Vegabase'
 project(':Vegabase').projectDir = new File('F:\\Android Base\\JitPackIO\\Vegabase\\library')
 include ':FaCache'
 project(':FaCache').projectDir = new File('F:\\Android Base\\JitPackIO\\FaCache\\library')
+include ':FaDataBase'
+project(':FaDataBase').projectDir = new File('F:\\Android Base\\JitPackIO\\FaDataBase\\library')

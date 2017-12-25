@@ -1,5 +1,6 @@
 package com.example.binhbt.myapplication.ui;
 
+import com.example.binhbt.myapplication.BuildConfig;
 import com.example.binhbt.myapplication.net.EndPoints;
 import com.fa.loader.FALoader;
 import com.vn.fa.base.FaApplication;
@@ -7,6 +8,7 @@ import com.vn.fa.base.data.DataRepository;
 import com.vn.fa.base.data.cache.CacheProviders;
 import com.vn.fa.base.data.cache.rxcache.RxCacheAdapterFactory;
 import com.vn.fa.base.domain.Repository;
+import com.vn.fa.base.util.FaLog;
 
 /**
  * Created by binhbt on 6/22/2016.
@@ -18,8 +20,10 @@ public class DemoApplication extends FaApplication {
     @Override
     public void onCreate() {
         super.onCreate();
+        FALoader.type = FALoader.Type.FRESCO;
         FALoader.initialize(this);
         faApplication = this;
+        FaLog.init(BuildConfig.DEBUG);
     }
     public String getBaseUrl(){
         return EndPoints.API_ENDPOINT;

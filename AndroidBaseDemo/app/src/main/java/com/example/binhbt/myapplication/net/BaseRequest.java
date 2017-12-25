@@ -2,8 +2,11 @@ package com.example.binhbt.myapplication.net;
 
 import com.example.binhbt.myapplication.ui.DemoApplication;
 import com.vn.fa.base.data.DataRepository;
+import com.vn.fa.base.data.cache.CacheType;
+import com.vn.fa.base.data.net.FaRequest;
 import com.vn.fa.base.domain.Repository;
-import com.vn.fa.base.net.FaRequest;
+
+import io.reactivex.Observable;
 
 /**
  * Created by leobui on 10/30/2017.
@@ -28,6 +31,7 @@ public class BaseRequest extends FaRequest {
 //                if (container != null){
 //                    Toast.makeText(((Activity)container), "base callback", Toast.LENGTH_LONG).show();
 //                }
+                //doRequest();
             }
         });
     }
@@ -48,7 +52,13 @@ public class BaseRequest extends FaRequest {
     }
 
     @Override
+    public CacheType getCacheType() {
+        return CacheType.NET_FIRST;
+    }
+
+    @Override
     public String getBaseUrl() {
         return API_ENDPOINT;
     }
+
 }

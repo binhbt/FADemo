@@ -3,6 +3,7 @@ package com.example.binhbt.myapplication.model;
 import com.google.gson.annotations.SerializedName;
 
 import java.io.Serializable;
+import java.util.List;
 
 public class User implements Serializable {
 
@@ -13,7 +14,7 @@ public class User implements Serializable {
   @SerializedName("full_name")
   private String fullName;
   @SerializedName("email")
-  private String email;
+  private List<String> email;
   @SerializedName("description")
   private String description;
   @SerializedName("followers")
@@ -39,11 +40,11 @@ public class User implements Serializable {
     this.fullName = fullName;
   }
 
-  public String getEmail() {
+  public List<String> getEmail() {
     return email;
   }
 
-  public void setEmail(String email) {
+  public void setEmail(List<String> email) {
     this.email = email;
   }
 

@@ -1,4 +1,4 @@
-package com.example.binhbt.vegarecyclerview.demo.multipleviewtype.viewmodel;
+package com.example.binhbt.myapplication.viewmodel;
 
 import android.view.View;
 import android.widget.TextView;
@@ -8,8 +8,11 @@ import com.example.binhbt.myapplication.R;
 import com.example.binhbt.myapplication.model.VersionApp;
 import com.fa.loader.widget.FAImageView;
 import com.vn.fa.adapter.multipleviewtype.BinderViewHolder;
+import com.vn.fa.base.adapter.FaAdapter;
 import com.vn.fa.base.holder.VegaBinderView;
 import com.vn.fa.base.holder.VegaViewHolder;
+
+import java.util.List;
 
 import butterknife.Bind;
 
@@ -21,12 +24,11 @@ public class OtherAppItemView  extends VegaBinderView<VersionApp> {
         super(data);
     }
 
-    int index = 0;
-    public PhotoViewHolder holder1;
 
     @Override
     public void bindViewHolder(BinderViewHolder holder, int position) {
-        holder1 = (PhotoViewHolder) holder;
+//        if (!(holder instanceof PhotoViewHolder)) return;
+        PhotoViewHolder holder1 = (PhotoViewHolder) holder;
         if (data.getResId() ==null) {
                 holder1.mImageView
                         .callback(new FAImageView.Callback() {
@@ -49,12 +51,22 @@ public class OtherAppItemView  extends VegaBinderView<VersionApp> {
                         })
                         .placeholder(R.drawable.common_full_open_on_phone)
                         .error(R.drawable.ic_android_black_48dp)
+                        .circle(true)
+                        .cornerRadius(50f)
+                        .borderColor(R.color.colorAccent)
+                        .border(3)
                         .loadImage(data.getThumb());
         }else{
             holder1.mImageView.setImageDrawable(data.getResId());
         }
         holder1.title.setText(data.getTitle());
-
+        holder1.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+//                List<VegaBinderView>  binderList= (List<VegaBinderView>)(List)((FaAdapter)getAdapter()).getBinderList();
+//                VersionApp versionApp = (VersionApp)binderList.get(1).getData();
+            }
+        });
     }
 
     private boolean isCreate = true;

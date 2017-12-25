@@ -43,6 +43,8 @@ public class FARecyclerViewActivity extends FaActivity {
     protected int getLayoutId() {
         return R.layout.activity_fa_recyclerview;
     }
+
+
 }
 
 

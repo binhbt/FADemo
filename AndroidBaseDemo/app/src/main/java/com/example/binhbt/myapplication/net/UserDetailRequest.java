@@ -1,12 +1,10 @@
 package com.example.binhbt.myapplication.net;
 
 import com.example.binhbt.myapplication.model.User;
-import com.example.binhbt.myapplication.model.VersionApp;
 import com.google.gson.reflect.TypeToken;
-import com.vn.fa.base.net.request.RequestType;
+import com.vn.fa.base.data.net.request.RequestType;
 
 import java.lang.reflect.Type;
-import java.util.List;
 
 import io.reactivex.Observable;
 

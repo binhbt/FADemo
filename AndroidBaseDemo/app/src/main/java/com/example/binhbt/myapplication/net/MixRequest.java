@@ -14,7 +14,7 @@ import io.reactivex.functions.BiFunction;
 
 public class MixRequest extends BaseRequest{
     @Override
-    protected Observable getApi() {
+    public Observable getApi() {
         UserListRequest userListRequest = new UserListRequest();
         UserDetailRequest detailRequest = new UserDetailRequest();
         Observable<MixUser> combined = Observable.zip(userListRequest.getApi(), detailRequest.getApi(), new BiFunction<List<User>, User, MixUser>() {

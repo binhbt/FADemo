@@ -4,6 +4,8 @@ import com.example.binhbt.myapplication.model.VersionApp;
 import com.google.gson.reflect.TypeToken;
 import com.vn.fa.base.model.VegaObject;
 
+import org.greenrobot.eventbus.EventBus;
+
 import java.lang.reflect.Type;
 import java.util.List;
 

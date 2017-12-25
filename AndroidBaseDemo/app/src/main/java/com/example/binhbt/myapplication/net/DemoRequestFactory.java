@@ -1,7 +1,7 @@
 package com.example.binhbt.myapplication.net;
 
 import com.vn.fa.base.VegaRequestFactory;
-import com.vn.fa.base.net.FaRequest;
+import com.vn.fa.base.data.net.FaRequest;
 
 /**
  * Created by leobui on 10/30/2017.
@@ -23,6 +23,7 @@ public class DemoRequestFactory extends VegaRequestFactory {
 
     public enum DemoRequestType {
         HOME_REQUEST("com.example.binhbt.myapplication.net.HomeRequest"),
+        USER_REQUEST("com.example.binhbt.myapplication.net.TestNullObjectRequest"),
         HOME_REQUEST1("other_app1.json");
         private String text;
 

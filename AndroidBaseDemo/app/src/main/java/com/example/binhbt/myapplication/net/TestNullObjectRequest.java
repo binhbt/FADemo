@@ -1,5 +1,6 @@
 package com.example.binhbt.myapplication.net;
 
+import com.example.binhbt.myapplication.model.User;
 import com.example.binhbt.myapplication.model.VersionApp;
 import com.google.gson.reflect.TypeToken;
 import com.vn.fa.base.data.net.request.RequestType;
@@ -8,18 +9,18 @@ import java.lang.reflect.Type;
 import java.util.List;
 
 /**
- * Created by leobui on 10/27/2017.
+ * Created by leobui on 12/19/2017.
  */
 
-public class HomeRequest extends BaseRequest {
+public class TestNullObjectRequest extends BaseRequest {
     @Override
     protected String getPath() {
-        return "other_app.json";
+        return "test/user_null.json";
     }
 
     @Override
     protected Type getDataType() {
-        Type type = new TypeToken<List<VersionApp>>() {}.getType();
+        Type type = new TypeToken<User>() {}.getType();
         return type;
     }
 
