@@ -1,0 +1,13 @@
+include ':app', ':vegaimageloader', ':vegafirebase'
+project(':vegaimageloader').projectDir = new File('F:\\Android Base\\JitPackIO\\vegaimageloader\\library')
+project(':vegafirebase').projectDir = new File('F:\\Android Base\\JitPackIO\\vegafirebase\\library')
+include ':Vegarequest'
+project(':Vegarequest').projectDir = new File('F:\\Android Base\\JitPackIO\\Vegarequest\\library')
+include ':VegaRecyclerView'
+project(':VegaRecyclerView').projectDir = new File('F:\\Android Base\\JitPackIO\\VegaRecyclerView\\library')
+include ':Vegabase'
+project(':Vegabase').projectDir = new File('F:\\Android Base\\JitPackIO\\Vegabase\\library')
+//include ':FaCache'
+//project(':FaCache').projectDir = new File('F:\\Android Base\\JitPackIO\\FaCache\\library')
+//include ':FaDataBase'
+//project(':FaDataBase').projectDir = new File('F:\\Android Base\\JitPackIO\\FaDataBase\\library')
