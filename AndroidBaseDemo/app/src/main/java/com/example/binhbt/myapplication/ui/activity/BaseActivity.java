@@ -39,7 +39,7 @@ public class  BaseActivity extends FaActivity implements MvpView{
     @Override
     protected void onDestroy() {
         if (presenter != null)
-        presenter.attachView(this);
+        presenter.detachView();
         super.onDestroy();
     }
 }
