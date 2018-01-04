@@ -7,6 +7,7 @@ import android.view.View;
 import com.example.binhbt.demo.R;
 import com.example.binhbt.demo.model.VersionApp;
 import com.example.binhbt.demo.ui.activity.BaseActivity;
+import com.example.binhbt.demo.ui.activity.MainActivity;
 import com.vn.fa.adapter.multipleviewtype.IViewBinder;
 import com.vn.fa.base.adapter.FaAdapter;
 import com.vn.fa.base.holder.OnItemClickListener;
@@ -24,8 +25,13 @@ public class ListAppActivity extends BaseActivity implements ListAppView{
     @Bind(R.id.list)
     RecyclerViewWrapper mRecycler;
     private FaAdapter mAdapter;
+    private int mode =0;
     @Override
     protected void initView(Bundle savedInstanceState) {
+        if (getIntent().getExtras() != null){
+            Bundle bundle = getIntent().getExtras();
+            mode = bundle.getInt(MainActivity.REQUEST_MODE, 0);
+        }
         mAdapter = new FaAdapter();
         mAdapter.setOnItemClickListener(new OnItemClickListener() {
             @Override
@@ -35,7 +41,13 @@ public class ListAppActivity extends BaseActivity implements ListAppView{
         });
         presenter = new ListAppPresenter();
         presenter.attachView(this);
-        ((ListAppPresenter)presenter).loadData();
+        if (mode ==0) {
+            ((ListAppPresenter) presenter).loadData();
+        }else if (mode ==1){
+            ((ListAppPresenter) presenter).flatRequest();
+        }else{
+            ((ListAppPresenter) presenter).mixRequest();
+        }
         FaLog.e("abc", "FaLog test");
     }
 

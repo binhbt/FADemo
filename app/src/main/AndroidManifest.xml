@@ -42,6 +42,10 @@
         <activity android:name="com.example.binhbt.farecyclerview.multipleviewtype.StaggedVerticalMultipleViewActivity"/>
         <activity android:name="com.example.binhbt.demo.ui.mvpdemo.ListAppActivity"/>
         <activity android:name="com.example.binhbt.demo.ui.farecyclerview.FARecyclerViewActivity"/>
+        <activity android:name=".ui.imageloader.FaImageLoaderDemoActivity"/>
+        <activity android:name=".ui.log.FaLogDemoActivity"/>
+
+
 
     </application>
 

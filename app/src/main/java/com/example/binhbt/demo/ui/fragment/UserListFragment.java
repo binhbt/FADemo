@@ -32,7 +32,7 @@ import io.reactivex.functions.BiFunction;
  * Created by binhbt on 6/8/2016.
  */
 public class UserListFragment extends BaseFragment {
-    private UsersAdapter usersAdapter;// = new UsersAdapter(getActivity());
+    private UsersAdapter usersAdapter;
     @Bind(R.id.rv_users)
     RecyclerView rv_users;
     @Bind(R.id.rl_progress)
@@ -45,15 +45,6 @@ public class UserListFragment extends BaseFragment {
     public UserListFragment() {
         setRetainInstance(true);
     }
-
-//    @Override
-//    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-//                             Bundle savedInstanceState) {
-//        final View fragmentView = inflater.inflate(R.layout.fragment_user_list, container, false);
-//        ButterKnife.bind(this, fragmentView);
-//        setupRecyclerView();
-//        return fragmentView;
-//    }
 
     @Override
     protected void initView(Bundle savedInstanceState) {
@@ -68,38 +59,6 @@ public class UserListFragment extends BaseFragment {
 
     private void startSubcriptions() {
 
-        Observable<Long> interval = Observable.interval(1, TimeUnit.SECONDS);
-        new RequestLoader.Builder()
-                .api(interval)
-                .callback(new RequestLoader.CallBack<Long>() {
-                    @Override
-                    public void onStart() {
-                        Log.i("asdasd", "Start count");
-                    }
-
-                    @Override
-                    public void onError(Throwable t) {
-                        Toast.makeText(getActivity(), "got error " + t.toString(), Toast.LENGTH_LONG).show();
-                        // Handle error
-                        hideLoading();
-                        showError("Request failed");
-                        showRetry();
-                    }
-
-                    @Override
-                    public void onFinish(Long result) {
-                        Log.i("aassa", "Started in onResume(), running until in onDestroy(): " + result);
-                    }
-                })
-                .container(this)
-                .tag("interval")
-                .build();
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                RequestLoader.getDefault().cancelByTag("interval");
-            }
-        }, 10000);
         new RequestLoader.Builder()
                 .api(api.userEntityList())
                 .callback(new RequestLoader.CallBack<List<User>>() {
@@ -121,27 +80,22 @@ public class UserListFragment extends BaseFragment {
 
                     @Override
                     public void onFinish(List<User> result) {
-                        //Log.e("Got result ", result.toString());
-                        //Toast.makeText(getActivity(), "got error "+result.toString(), Toast.LENGTH_LONG).show();
-                        // Update UI on the main thread
                         hideLoading();
                         renderUserList(result);
-                        //Log.e("response", result.toString());
                     }
+
                 })
                 .container(UserListFragment.this)
                 .tag("get_list")
                 .build();
-        //RequestLoader.getDefault().cancelByTag("get_list");
-        zipTest();
-        flatMapTest();
+//        zipTest();
+//        flatMapTest();
     }
 
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         if (savedInstanceState == null) {
-            //this.loadUserList();
             startSubcriptions();
         }
     }
@@ -167,16 +121,6 @@ public class UserListFragment extends BaseFragment {
         rv_users.setAdapter(null);
         super.onDestroyView();
     }
-
-//    private void showLoading() {
-//        this.rl_progress.setVisibility(View.VISIBLE);
-//        this.getActivity().setProgressBarIndeterminateVisibility(true);
-//    }
-//
-//    private void hideLoading() {
-//        this.rl_progress.setVisibility(View.GONE);
-//        this.getActivity().setProgressBarIndeterminateVisibility(false);
-//    }
 
     private void showError(String message) {
         this.showToastMessage(message);

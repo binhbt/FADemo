@@ -11,6 +11,8 @@ import android.view.WindowManager;
 import com.example.binhbt.demo.R;
 import com.example.binhbt.demo.model.User;
 import com.example.binhbt.demo.ui.farecyclerview.FARecyclerViewActivity;
+import com.example.binhbt.demo.ui.imageloader.FaImageLoaderDemoActivity;
+import com.example.binhbt.demo.ui.log.FaLogDemoActivity;
 import com.example.binhbt.demo.ui.mvpdemo.ListAppActivity;
 import com.vn.fa.net.ParamBuilder;
 import com.vn.fa.net.RequestLoader;
@@ -21,7 +23,7 @@ import java.util.Map;
 import butterknife.OnClick;
 
 public class MainActivity extends BaseActivity {
-
+    public static final String REQUEST_MODE ="REQUEST_MODE";
     @Override
     public void onCreate(Bundle savedInstanceState) {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
@@ -47,18 +49,45 @@ public class MainActivity extends BaseActivity {
     }
     @OnClick(R.id.btn_recyclerview)
     public void showRecyclerViewDemo() {
-        //showDialog();
         startActivity(new Intent(this, com.example.binhbt.farecyclerview.MainActivity.class));
     }
     @OnClick(R.id.btn_mvp)
     public void showMvpDemo() {
-        //showDialog();
-        startActivity(new Intent(this, ListAppActivity.class));
+        Bundle bundle = new Bundle();
+        bundle.putInt(REQUEST_MODE, 0);
+        Intent i = new Intent(this, ListAppActivity.class);
+        i.putExtras(bundle);
+        startActivity(i);
+    }
+    @OnClick(R.id.btn_flat)
+    public void showFlat2Request() {
+        Bundle bundle = new Bundle();
+        bundle.putInt(REQUEST_MODE, 1);
+        Intent i = new Intent(this, ListAppActivity.class);
+        i.putExtras(bundle);
+        startActivity(i);
+    }
+    @OnClick(R.id.btn_mix)
+    public void showMix2Request() {
+        Bundle bundle = new Bundle();
+        bundle.putInt(REQUEST_MODE, 2);
+        Intent i = new Intent(this, ListAppActivity.class);
+        i.putExtras(bundle);
+        startActivity(i);
     }
     @OnClick(R.id.btn_fa_recyclerview)
     public void showFaRecyclerview() {
-        //showDialog();
         startActivity(new Intent(this, FARecyclerViewActivity.class));
+    }
+    @OnClick(R.id.btn_image_loader)
+    public void faImageViewDemo() {
+        //showDialog();
+        startActivity(new Intent(this, FaImageLoaderDemoActivity.class));
+    }
+    @OnClick(R.id.btn_log)
+    public void showLog() {
+        //showDialog();
+        startActivity(new Intent(this, FaLogDemoActivity.class));
     }
     private void showDialog(){
         new AlertDialog.Builder(this)

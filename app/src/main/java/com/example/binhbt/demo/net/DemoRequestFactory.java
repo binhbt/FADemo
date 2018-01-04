@@ -22,8 +22,8 @@ public class DemoRequestFactory extends VegaRequestFactory {
     }
 
     public enum DemoRequestType {
-        HOME_REQUEST("com.example.binhbt.demo.net.HomeRequest"),
-        USER_REQUEST("com.example.binhbt.demo.net.TestNullObjectRequest"),
+        HOME_REQUEST("other_app.json"),
+        USER_REQUEST("test/user_null.json"),
         HOME_REQUEST1("other_app1.json");
         private String text;
 
@@ -42,7 +42,7 @@ public class DemoRequestFactory extends VegaRequestFactory {
 
     }
     public FaRequest getRequest(DemoRequestType demoRequestType) {
-        return getRequest(demoRequestType.toString());
-        //return new BaseRequest().path(demoRequestType.toString());
+        //return getRequest(demoRequestType.toString());
+        return new BaseRequest().path(demoRequestType.toString());
     }
 }
