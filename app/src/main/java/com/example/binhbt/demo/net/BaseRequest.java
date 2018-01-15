@@ -4,7 +4,9 @@ import com.example.binhbt.demo.ui.DemoApplication;
 import com.vn.fa.base.data.DataRepository;
 import com.vn.fa.base.data.cache.CacheType;
 import com.vn.fa.base.data.net.FaRequest;
+import com.vn.fa.base.data.net.request.okhttp.OkHttpAdapterFactory;
 import com.vn.fa.base.domain.Repository;
+import com.vn.fa.net.adapter.Request;
 
 /**
  * Created by leobui on 10/30/2017.
@@ -58,5 +60,8 @@ public class BaseRequest extends FaRequest {
     public String getBaseUrl() {
         return API_ENDPOINT;
     }
-
+    @Override
+    public Request.Factory getRequestAdapter() {
+        return new OkHttpAdapterFactory();
+    }
 }
