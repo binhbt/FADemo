@@ -6,6 +6,7 @@ import android.os.Handler;
 import android.os.Looper;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
@@ -16,8 +17,10 @@ import com.example.binhbt.farecyclerview.multipleviewtype.model.TextItem;
 import com.malinskiy.superrecyclerview.OnMoreListener;
 import com.malinskiy.superrecyclerview.swipe.SparseItemRemoveAnimator;
 import com.malinskiy.superrecyclerview.swipe.SwipeDismissRecyclerViewTouchListener;
+import com.vn.fa.adapter.infinite.InfiniteAdapter;
 import com.vn.fa.adapter.multipleviewtype.IViewBinder;
 import com.vn.fa.adapter.multipleviewtype.VegaBindAdapter;
+import com.vn.fa.base.adapter.FaAdapter;
 import com.vn.fa.widget.RecyclerViewWrapper;
 
 import java.util.ArrayList;
@@ -28,7 +31,7 @@ import java.util.ArrayList;
 public abstract class VegaBaseMultipleViewActivity extends Activity implements SwipeRefreshLayout.OnRefreshListener, OnMoreListener, SwipeDismissRecyclerViewTouchListener.DismissCallbacks {
 
     private RecyclerViewWrapper mRecycler;
-    private VegaBindAdapter mAdapter;
+    private FaAdapter mAdapter;
     private SparseItemRemoveAnimator mSparseAnimator;
     private RecyclerView.LayoutManager mLayoutManager;
     private Handler mHandler;
@@ -39,7 +42,7 @@ public abstract class VegaBaseMultipleViewActivity extends Activity implements S
         setContentView(getLayoutId());
 
         ArrayList<String> list = new ArrayList<>();
-        mAdapter = new VegaBindAdapter();
+        mAdapter = new FaAdapter();
 
         mRecycler = (RecyclerViewWrapper) findViewById(R.id.list);
         //mLayoutManager = getLayoutManager();
@@ -97,7 +100,31 @@ public abstract class VegaBaseMultipleViewActivity extends Activity implements S
 
         mRecycler.setRefreshListener(this);
         mRecycler.setRefreshingColorResources(android.R.color.holo_orange_light, android.R.color.holo_blue_light, android.R.color.holo_green_light, android.R.color.holo_red_light);
-        mRecycler.setupMoreListener(this);
+        //mRecycler.setupMoreListener(this);
+        mAdapter.setOnLoadMoreListener(new InfiniteAdapter.OnLoadMoreListener() {
+            @Override
+            public void onLoadMore() {
+                if (pageCount <5) {
+                    mHandler.postDelayed(new Runnable() {
+                        public void run() {
+                            ArrayList<IViewBinder> list = new ArrayList<IViewBinder>();
+                            list.add(new PhotoItem());
+                            list.add(new TextItem());
+                            list.add(new PhotoItem());
+                            list.add(new TextItem());
+                            mAdapter.addAllDataObject(list);
+
+                        }
+                    }, 1000);
+                    Log.e("pagcount", pageCount+"");
+
+                    pageCount ++;
+                }else{
+                    Log.e("pagcount", pageCount+"");
+                    mAdapter.setShouldLoadMore(false);
+                }
+            }
+        });
     }
 
     protected abstract int getLayoutId();
