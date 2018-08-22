@@ -1,4 +1,5 @@
-include ':app', ':vegaimageloader', ':vegafirebase'
+include ':app'
+/*, ':vegaimageloader', ':vegafirebase'
 project(':vegaimageloader').projectDir = new File('F:\\Android Base\\JitPackIO\\vegaimageloader\\library')
 project(':vegafirebase').projectDir = new File('F:\\Android Base\\JitPackIO\\vegafirebase\\library')
 include ':Vegarequest'
@@ -11,3 +12,4 @@ project(':Vegabase').projectDir = new File('F:\\Android Base\\JitPackIO\\Vegabas
 //project(':FaCache').projectDir = new File('F:\\Android Base\\JitPackIO\\FaCache\\library')
 //include ':FaDataBase'
 //project(':FaDataBase').projectDir = new File('F:\\Android Base\\JitPackIO\\FaDataBase\\library')
+*/
