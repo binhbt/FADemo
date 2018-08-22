@@ -43,8 +43,8 @@ dependencies {
     testCompile 'junit:junit:4.12'
     compile libraries.supportAppCompat
 
-    compile project(':Fabase')
-//    compile 'com.github.binhbt:Vegabase:1.3.4'
+//    compile project(':Fabase')
+    compile 'com.github.binhbt:Vegabase:1.3.4'
 //    compile project(':vegaimageloader')
 //    compile project(':vegafirebase')
 
