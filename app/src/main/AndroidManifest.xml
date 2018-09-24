@@ -30,8 +30,6 @@
         <activity android:name="com.example.binhbt.farecyclerview.VegaStaggedVerticalActivity"/>
         <activity android:name="com.example.binhbt.farecyclerview.VegaStaggedHorizontalActivity"/>
         <activity android:name="com.example.binhbt.farecyclerview.VegaSwipeActivity"/>
-        <activity android:name="com.example.binhbt.farecyclerview.VegaHeaderAdapterActivity"/>
-        <activity android:name="com.example.binhbt.farecyclerview.multipleviewtype.sectioned.HomeActivity"/>
 
         <activity android:name="com.example.binhbt.farecyclerview.multipleviewtype.MultipleDemoActivity"/>
         <activity android:name="com.example.binhbt.farecyclerview.multipleviewtype.ListVerticalMultipleViewActivity"/>
@@ -42,7 +40,6 @@
         <activity android:name="com.example.binhbt.farecyclerview.multipleviewtype.StaggedVerticalMultipleViewActivity"/>
         <activity android:name="com.example.binhbt.demo.ui.mvpdemo.ListAppActivity"/>
         <activity android:name="com.example.binhbt.demo.ui.farecyclerview.FARecyclerViewActivity"/>
-        <activity android:name=".ui.imageloader.FaImageLoaderDemoActivity"/>
         <activity android:name=".ui.log.FaLogDemoActivity"/>
 
 

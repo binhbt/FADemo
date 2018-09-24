@@ -3,15 +3,15 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.vn.fa.base.widget.FARecyclerview xmlns:vega="http://schemas.android.com/apk/res-auto"
+    <com.vn.fa.base.widget.FARecyclerview xmlns:fa="http://schemas.android.com/apk/res-auto"
         android:id="@+id/list"
         android:layout_width="match_parent"
         android:layout_centerHorizontal="true"
-        vega:vega_layout_empty="@layout/emptyview"
-        vega:vega_type="grid"
-        vega:vega_spanCount="2"
-        vega:vega_layout_progress="@layout/layout_center_progress"
-        vega:vega_layout_moreProgress="@layout/layout_center_progress"
+        fa:fa_layout_empty="@layout/emptyview"
+        fa:fa_type="grid"
+        fa:fa_spanCount="2"
+        fa:fa_layout_progress="@layout/layout_center_progress"
+        fa:fa_layout_moreProgress="@layout/layout_center_progress"
         android:layout_height="match_parent"/>
 
 </LinearLayout>

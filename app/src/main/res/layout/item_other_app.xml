@@ -9,7 +9,7 @@
     android:gravity="center"
     android:orientation="vertical">
 
-    <com.fa.loader.widget.FAImageView
+    <ImageView
         android:id="@+id/thumb"
         android:src="@drawable/ic_launcher"
         android:layout_width="wrap_content"

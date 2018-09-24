@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:vega="http://schemas.android.com/apk/res-auto"
+    xmlns:fa="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <com.vn.fa.widget.RecyclerViewWrapper xmlns:android="http://schemas.android.com/apk/res/android"
+    <com.vn.fa.widget.FaRecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/recyclerview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        vega:vega_layout_empty="@layout/emptyview"
-        vega:vega_layout_moreProgress="@layout/layout_center_progress"
-        vega:vega_layout_progress="@layout/layout_center_progress" />
+        fa:fa_layout_empty="@layout/emptyview"
+        fa:fa_layout_moreProgress="@layout/layout_center_progress"
+        fa:fa_layout_progress="@layout/layout_center_progress" />
 
 </LinearLayout>

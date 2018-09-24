@@ -23,7 +23,7 @@ import java.util.Collection;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.OnClick;
 import io.reactivex.Observable;
 import io.reactivex.functions.BiFunction;
@@ -33,13 +33,13 @@ import io.reactivex.functions.BiFunction;
  */
 public class UserListFragment extends BaseFragment {
     private UsersAdapter usersAdapter;
-    @Bind(R.id.rv_users)
+    @BindView(R.id.rv_users)
     RecyclerView rv_users;
-    @Bind(R.id.rl_progress)
+    @BindView(R.id.rl_progress)
     RelativeLayout rl_progress;
-    @Bind(R.id.rl_retry)
+    @BindView(R.id.rl_retry)
     RelativeLayout rl_retry;
-    @Bind(R.id.bt_retry)
+    @BindView(R.id.bt_retry)
     Button bt_retry;
 
     public UserListFragment() {

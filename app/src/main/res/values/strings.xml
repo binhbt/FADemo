@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Vegabase demo</string>
+    <string name="app_name">Fabase demo</string>
 		    <string name="title_activity_home">HomeActivity</string>
     <string name="url">http://www.clip.vn/</string>
 

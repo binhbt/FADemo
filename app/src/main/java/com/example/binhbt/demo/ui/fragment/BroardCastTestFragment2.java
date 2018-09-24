@@ -12,14 +12,14 @@ import com.vn.fa.base.ui.FaFragment;
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.OnClick;
 
 /**
  * Created by binhbt on 8/12/2016.
  */
 public class BroardCastTestFragment2 extends FaFragment {
-    @Bind(R.id.result)
+    @BindView(R.id.result)
     TextView result;
     @OnClick(R.id.add_fragment)
     public void addFragment(){

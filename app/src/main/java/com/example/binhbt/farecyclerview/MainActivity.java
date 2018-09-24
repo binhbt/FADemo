@@ -7,7 +7,6 @@ import android.view.View;
 
 import com.example.binhbt.demo.R;
 import com.example.binhbt.farecyclerview.multipleviewtype.MultipleDemoActivity;
-import com.example.binhbt.farecyclerview.multipleviewtype.sectioned.HomeActivity;
 
 
 public class MainActivity extends Activity {
@@ -68,21 +67,6 @@ public class MainActivity extends Activity {
             }
         });
 
-        findViewById(R.id.button_header_sample).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, VegaHeaderAdapterActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        findViewById(R.id.button_sectioned).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, HomeActivity.class);
-                startActivity(intent);
-            }
-        });
         findViewById(R.id.button_adapter).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

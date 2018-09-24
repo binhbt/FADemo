@@ -10,7 +10,7 @@ import com.example.binhbt.demo.R;
 import com.example.binhbt.demo.ui.activity.BaseActivity;
 import com.vn.fa.base.util.FaLog;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.OnClick;
 
 /**
@@ -18,8 +18,8 @@ import butterknife.OnClick;
  */
 
 public class FaLogDemoActivity extends BaseActivity{
-    @Bind(R.id.txt_tag)TextView txtTag;
-    @Bind(R.id.txt_log)TextView txtLog;
+    @BindView(R.id.txt_tag)TextView txtTag;
+    @BindView(R.id.txt_log)TextView txtLog;
     @OnClick(R.id.btn_show_log)
     public void showLog(){
         FaLog.e(txtTag.getText().toString()+"", txtLog.getText().toString()+"");

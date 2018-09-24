@@ -8,5 +8,4 @@
     android:background="#001F3F"
     android:textSize="24sp"
     android:textColor="@android:color/white"
-    tools:text="Animals starting with A"
-    tools:context=".MainActivity"/>
+    tools:text="Animals starting with A"/>

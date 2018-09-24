@@ -13,7 +13,7 @@ import com.example.binhbt.demo.R;
 import com.malinskiy.superrecyclerview.OnMoreListener;
 import com.malinskiy.superrecyclerview.swipe.SparseItemRemoveAnimator;
 import com.malinskiy.superrecyclerview.swipe.SwipeDismissRecyclerViewTouchListener;
-import com.vn.fa.widget.RecyclerViewWrapper;
+import com.vn.fa.widget.FaRecyclerView;
 
 import java.util.ArrayList;
 
@@ -22,7 +22,7 @@ import java.util.ArrayList;
  */
 public abstract class VegaBaseActivity extends Activity implements SwipeRefreshLayout.OnRefreshListener, OnMoreListener, SwipeDismissRecyclerViewTouchListener.DismissCallbacks {
 
-    private RecyclerViewWrapper mRecycler;
+    private FaRecyclerView mRecycler;
     private StringListAdapter   mAdapter;
     private SparseItemRemoveAnimator mSparseAnimator;
     private RecyclerView.LayoutManager mLayoutManager;
@@ -36,7 +36,7 @@ public abstract class VegaBaseActivity extends Activity implements SwipeRefreshL
         ArrayList<String> list = new ArrayList<>();
         mAdapter = new StringListAdapter(list);
 
-        mRecycler = (RecyclerViewWrapper) findViewById(R.id.list);
+        mRecycler = (FaRecyclerView) findViewById(R.id.list);
         //mLayoutManager = getLayoutManager();
         //mRecycler.setLayoutManager(mLayoutManager);
         mRecycler.addItemDecoration(new PaddingItemDecoration());

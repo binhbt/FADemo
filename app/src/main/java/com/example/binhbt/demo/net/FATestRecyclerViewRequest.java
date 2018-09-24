@@ -23,7 +23,7 @@ public class FATestRecyclerViewRequest extends BaseRequest{
         return type;
     }
     @Override
-    protected Convert getConvert() {
+    public Convert getConvert() {
         return new Convert<VegaObject<List<VersionApp>>, List<VersionApp>>() {
 
             @Override

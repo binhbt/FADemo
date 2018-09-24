@@ -1,61 +1,34 @@
 package com.example.binhbt.demo.viewmodel;
 
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.binhbt.demo.R;
 import com.example.binhbt.demo.model.VersionApp;
-import com.fa.loader.widget.FAImageView;
+import com.squareup.picasso.Picasso;
 import com.vn.fa.adapter.multipleviewtype.BinderViewHolder;
-import com.vn.fa.base.holder.VegaBinderView;
-import com.vn.fa.base.holder.VegaViewHolder;
+import com.vn.fa.base.holder.FaBinderView;
+import com.vn.fa.base.holder.FaViewHolder;
 
-import butterknife.Bind;
+import butterknife.BindView;
 
 /**
  * Created by leobui on 12/5/2017.
  */
 
-public class AppItemCircleView extends VegaBinderView<VersionApp> {
+public class AppItemCircleView extends FaBinderView<VersionApp> {
     public AppItemCircleView(VersionApp data) {
         super(data);
     }
 
     @Override
     public void bindViewHolder(BinderViewHolder holder, int position) {
-//        if (!(holder instanceof AppItemCircleView.PhotoViewHolder)) return;
-
-        AppItemCircleView.PhotoViewHolder holder1 = (AppItemCircleView.PhotoViewHolder) holder;
+        final AppItemCircleView.PhotoViewHolder holder1 = (AppItemCircleView.PhotoViewHolder) holder;
         if (data.getResId() ==null) {
-            holder1.mImageView
-                    .callback(new FAImageView.Callback() {
-                        @Override
-                        public void onStart() {
-                            //Toast.makeText(holder1.mImageView.getContext(), "Start", Toast.LENGTH_LONG).show();
-                        }
-
-                        @Override
-                        public void onSuccess() {
-                            //Toast.makeText(holder1.mImageView.getContext(), "Success", Toast.LENGTH_LONG).show();
-
-                        }
-
-                        @Override
-                        public void onError() {
-                            Toast.makeText(holder1.mImageView.getContext(), "Error", Toast.LENGTH_LONG).show();
-
-                        }
-                    })
-                    .placeholder(R.drawable.common_full_open_on_phone)
-                    .error(R.drawable.ic_android_black_48dp)
-                    .circle(true)
-                    .cornerRadius(50f)
-                    .borderColor(android.R.color.transparent)
-                    .border(3)
-                    .loadImage(data.getThumb());
+            Picasso.with(holder1.title.getContext()).load(data.getThumb()).into(holder1.mImageView);
         }else{
-            holder1.mImageView.setImageDrawable(data.getResId());
+            //holder1.mImageView.setImageDrawable(data.getResId());
         }
         holder1.title.setText(data.getTitle());
 
@@ -73,12 +46,12 @@ public class AppItemCircleView extends VegaBinderView<VersionApp> {
         return R.layout.item_other_app;
     }
 
-    public class PhotoViewHolder extends VegaViewHolder {
-        @Bind(R.id.thumb)
-        FAImageView mImageView;
-        @Bind(R.id.tittle)
+    public class PhotoViewHolder extends FaViewHolder {
+        @BindView(R.id.thumb)
+        ImageView mImageView;
+        @BindView(R.id.tittle)
         TextView title;
-        @Bind(R.id.item)
+        @BindView(R.id.item)
         public View item;
 
         public PhotoViewHolder(View view) {

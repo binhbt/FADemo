@@ -12,18 +12,18 @@ import com.vn.fa.adapter.multipleviewtype.IViewBinder;
 import com.vn.fa.base.adapter.FaAdapter;
 import com.vn.fa.base.holder.OnItemClickListener;
 import com.vn.fa.base.util.FaLog;
-import com.vn.fa.widget.RecyclerViewWrapper;
+import com.vn.fa.widget.FaRecyclerView;
 
 import java.util.List;
 
-import butterknife.Bind;
+import butterknife.BindView;
 
 /**
  * Created by binhbt on 3/7/2017.
  */
 public class ListAppActivity extends BaseActivity implements ListAppView{
-    @Bind(R.id.list)
-    RecyclerViewWrapper mRecycler;
+    @BindView(R.id.list)
+    FaRecyclerView mRecycler;
     private FaAdapter mAdapter;
     private int mode =0;
     @Override

@@ -12,7 +12,7 @@ import android.widget.Toast;
 import com.example.binhbt.demo.R;
 import com.malinskiy.superrecyclerview.OnMoreListener;
 import com.malinskiy.superrecyclerview.swipe.SwipeItemManagerInterface;
-import com.vn.fa.widget.RecyclerViewWrapper;
+import com.vn.fa.widget.FaRecyclerView;
 
 import java.util.ArrayList;
 
@@ -21,7 +21,7 @@ import java.util.ArrayList;
  */
 public class VegaSwipeActivity extends Activity implements SwipeRefreshLayout.OnRefreshListener, OnMoreListener {
 
-    private RecyclerViewWrapper mRecycler;
+    private FaRecyclerView mRecycler;
     private SwipeAdapter      mAdapter;
     private Handler mHandler;
 
@@ -29,7 +29,7 @@ public class VegaSwipeActivity extends Activity implements SwipeRefreshLayout.On
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.vega_activity_list_vertical);
-        mRecycler = (RecyclerViewWrapper) findViewById(R.id.list);
+        mRecycler = (FaRecyclerView) findViewById(R.id.list);
         mRecycler.setLayoutManager(new LinearLayoutManager(this));
 
         ArrayList<String> list = new ArrayList<>();

@@ -1,18 +1,18 @@
 package com.example.binhbt.demo.net;
 
-import com.vn.fa.base.VegaRequestFactory;
+import com.vn.fa.base.FaRequestFactory;
 import com.vn.fa.base.data.net.FaRequest;
 
 /**
  * Created by leobui on 10/30/2017.
  */
 
-public class DemoRequestFactory extends VegaRequestFactory {
+public class DemoRequestFactory extends FaRequestFactory {
     static volatile DemoRequestFactory vegaRequestFactory;
 
     public static DemoRequestFactory getInstance() {
         if (vegaRequestFactory == null) {
-            synchronized (VegaRequestFactory.class) {
+            synchronized (FaRequestFactory.class) {
                 if (vegaRequestFactory == null) {
                     vegaRequestFactory = new DemoRequestFactory();
                 }

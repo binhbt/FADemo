@@ -10,14 +10,14 @@ import com.vn.fa.base.holder.OnItemClickListener;
 import com.vn.fa.base.ui.FaActivity;
 import com.vn.fa.base.widget.FARecyclerview;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.OnClick;
 
 /**
  * Created by leobui on 11/3/2017.
  */
 public class FARecyclerViewActivity extends FaActivity {
-    @Bind(R.id.list)FARecyclerview recyclerview;
+    @BindView(R.id.list) FARecyclerview recyclerview;
     @OnClick(R.id.list)
     public void clickList(){
 

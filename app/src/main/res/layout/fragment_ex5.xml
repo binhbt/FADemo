@@ -3,13 +3,13 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.vn.fa.widget.RecyclerViewWrapper xmlns:vega="http://schemas.android.com/apk/res-auto"
+    <com.vn.fa.widget.FaRecyclerView xmlns:fa="http://schemas.android.com/apk/res-auto"
         android:id="@+id/list"
         android:layout_width="match_parent"
         android:layout_centerHorizontal="true"
-        vega:vega_layout_empty="@layout/emptyview"
-        vega:vega_layout_progress="@layout/layout_center_progress"
-        vega:vega_layout_moreProgress="@layout/layout_center_progress"
+        fa:fa_layout_empty="@layout/emptyview"
+        fa:fa_layout_progress="@layout/layout_center_progress"
+        fa:fa_layout_moreProgress="@layout/layout_center_progress"
         android:layout_height="match_parent"/>
 
 </LinearLayout>

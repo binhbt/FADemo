@@ -6,15 +6,16 @@ import android.widget.TextView;
 import com.example.binhbt.demo.R;
 import com.example.binhbt.farecyclerview.multipleviewtype.model.TextItem;
 import com.vn.fa.adapter.multipleviewtype.BinderViewHolder;
-import com.vn.fa.adapter.multipleviewtype.VegaDataBinder;
-import com.vn.fa.base.holder.VegaViewHolder;
+import com.vn.fa.base.holder.FaBinderView;
+import com.vn.fa.base.holder.FaViewHolder;
 
-import butterknife.Bind;
+import butterknife.BindView;
+
 
 /**
  * Created by binhbt on 7/22/2016.
  */
-public class TextItemView extends VegaDataBinder<TextItem> {
+public class TextItemView extends FaBinderView<TextItem> {
     public TextItemView(TextItem data){
         super(data);
     }
@@ -34,8 +35,8 @@ public class TextItemView extends VegaDataBinder<TextItem> {
         return R.layout.item_text;
     }
 
-    static class TextViewHolder extends VegaViewHolder {
-        @Bind(R.id.text)
+    static class TextViewHolder extends FaViewHolder {
+        @BindView(R.id.text)
         TextView mTxt;
         public TextViewHolder(View view) {
             super(view);

@@ -16,9 +16,9 @@ import com.example.binhbt.farecyclerview.multipleviewtype.model.TextItem;
 import com.malinskiy.superrecyclerview.OnMoreListener;
 import com.malinskiy.superrecyclerview.swipe.SparseItemRemoveAnimator;
 import com.malinskiy.superrecyclerview.swipe.SwipeDismissRecyclerViewTouchListener;
+import com.vn.fa.adapter.FaAdapter;
 import com.vn.fa.adapter.multipleviewtype.IViewBinder;
-import com.vn.fa.adapter.multipleviewtype.VegaBindAdapter;
-import com.vn.fa.widget.RecyclerViewWrapper;
+import com.vn.fa.widget.FaRecyclerView;
 
 import java.util.ArrayList;
 
@@ -27,8 +27,8 @@ import java.util.ArrayList;
  */
 public abstract class VegaBaseMultipleViewActivity extends Activity implements SwipeRefreshLayout.OnRefreshListener, OnMoreListener, SwipeDismissRecyclerViewTouchListener.DismissCallbacks {
 
-    private RecyclerViewWrapper mRecycler;
-    private VegaBindAdapter mAdapter;
+    private FaRecyclerView mRecycler;
+    private FaAdapter mAdapter;
     private SparseItemRemoveAnimator mSparseAnimator;
     private RecyclerView.LayoutManager mLayoutManager;
     private Handler mHandler;
@@ -39,9 +39,9 @@ public abstract class VegaBaseMultipleViewActivity extends Activity implements S
         setContentView(getLayoutId());
 
         ArrayList<String> list = new ArrayList<>();
-        mAdapter = new VegaBindAdapter();
+        mAdapter = new FaAdapter();
 
-        mRecycler = (RecyclerViewWrapper) findViewById(R.id.list);
+        mRecycler = (FaRecyclerView) findViewById(R.id.list);
         //mLayoutManager = getLayoutManager();
         //mRecycler.setLayoutManager(mLayoutManager);
         if (getLayoutManager() != null)

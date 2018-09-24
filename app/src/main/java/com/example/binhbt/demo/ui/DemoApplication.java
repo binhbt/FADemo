@@ -2,7 +2,6 @@ package com.example.binhbt.demo.ui;
 
 import com.example.binhbt.demo.BuildConfig;
 import com.example.binhbt.demo.net.EndPoints;
-import com.fa.loader.FALoader;
 import com.vn.fa.base.FaApplication;
 import com.vn.fa.base.data.cache.CacheProviders;
 import com.vn.fa.base.data.cache.rxcache.RxCacheAdapterFactory;
@@ -18,8 +17,6 @@ public class DemoApplication extends FaApplication {
     @Override
     public void onCreate() {
         super.onCreate();
-        FALoader.type = FALoader.Type.FRESCO;
-        FALoader.initialize(this);
         faApplication = this;
         FaLog.init(BuildConfig.DEBUG);
     }

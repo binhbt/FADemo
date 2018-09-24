@@ -8,7 +8,6 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-
 import com.example.binhbt.demo.R;
 import com.example.binhbt.demo.model.User;
 import com.squareup.picasso.Picasso;
@@ -17,7 +16,7 @@ import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class UsersAdapter extends RecyclerView.Adapter<UsersAdapter.UserViewHolder> {
@@ -85,9 +84,9 @@ public class UsersAdapter extends RecyclerView.Adapter<UsersAdapter.UserViewHold
   }
 
   static class UserViewHolder extends RecyclerView.ViewHolder {
-    @Bind(R.id.title)
+    @BindView(R.id.title)
     TextView textViewTitle;
-    @Bind(R.id.avatar)
+    @BindView(R.id.avatar)
     ImageView avatar;
     public UserViewHolder(View itemView) {
       super(itemView);

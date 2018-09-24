@@ -10,6 +10,7 @@ android {
         applicationId "com.example.binhbt.myapplication"
         versionCode 1
         versionName "1.0"
+
     }
     buildTypes {
         release {
@@ -39,22 +40,25 @@ repositories {
 //apply plugin: 'com.android.application' //or apply plugin: 'java'
 apply plugin: 'me.tatarka.retrolambda'
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    testCompile 'junit:junit:4.12'
-    compile libraries.supportAppCompat
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    //testCompile 'junit:junit:4.12'
+    //compile libraries.supportAppCompat
 
-//    compile project(':Vegabase')
-    compile 'com.github.binhbt:Vegabase:1.3.4'
-//    compile project(':vegaimageloader')
+//    implementation project(':FaBase')
+    compile 'com.github.binhbt:Fabase:1.5.4'
+//    compile project(':Faimageloader')
 //    compile project(':vegafirebase')
 
-    compile libraries.supportCardView
+    implementation libraries.supportCardView
     //compile libraries.supportRecyclerView
-    compile libraries.picasso
-    compile libraries.supportDesign
-    compile libraries.supportCardView
-    compile libraries.materialicons
-    compile libraries.stickyheaders
-
+    implementation libraries.picasso
+    implementation libraries.supportDesign
+    implementation libraries.supportCardView
+    implementation libraries.materialicons
+    implementation libraries.stickyheaders
+    implementation 'com.jakewharton:butterknife:8.4.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.4.0'
 }
-apply plugin: 'com.google.gms.google-services'
+//apply plugin: 'com.google.gms.google-services'
+
+
