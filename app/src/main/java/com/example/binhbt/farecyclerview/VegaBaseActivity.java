@@ -54,7 +54,7 @@ public abstract class VegaBaseActivity extends Activity implements SwipeRefreshL
             @Override
             public void run() {
                 try {
-                    Thread.sleep(2000);
+                    Thread.sleep(1000);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
@@ -118,7 +118,7 @@ public abstract class VegaBaseActivity extends Activity implements SwipeRefreshL
                     mAdapter.add("More asked, more served");
                     mAdapter.add("More asked, more served");
                 }
-            }, 300);
+            }, 10000);
             pageCount ++;
         }else{
             mRecycler.endData();
